@@ -1,57 +1,45 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const experiences = [
-  {
-    id: 1,
-    company: 'Lazada (Alibaba International)',
-    position: 'Senior Product Manager',
-    period: '2022 - Present',
-    location: 'Hangzhou, China',
-    achievements: [
-      'Led development of LazCortex AI Operations Workbench, improving operational efficiency by 40%',
-      'Managed cross-functional teams of 15+ engineers and designers',
-      'Implemented AI-driven seller management systems serving 100K+ merchants',
-      'Drove product strategy for Southeast Asian e-commerce operations'
-    ]
-  },
-  {
-    id: 2,
-    company: 'Alibaba Group',
-    position: 'Product Manager',
-    period: '2020 - 2022',
-    location: 'Hangzhou, China',
-    achievements: [
-      'Designed and launched merchant onboarding platform with 95% completion rate',
-      'Collaborated with data science teams to build predictive analytics tools',
-      'Optimized user experience flows resulting in 25% increase in conversion',
-      'Mentored junior product managers and established PM best practices'
-    ]
-  },
-  {
-    id: 3,
-    company: 'Tech Startup',
-    position: 'Associate Product Manager',
-    period: '2019 - 2020',
-    location: 'Shanghai, China',
-    achievements: [
-      'Built MVP for B2B SaaS platform from concept to launch',
-      'Conducted user research and competitive analysis for market positioning',
-      'Worked closely with engineering teams using agile methodologies',
-      'Achieved product-market fit with 80% user retention rate'
-    ]
-  }
-];
 
 const Experience: React.FC = () => {
+  const { t } = useLanguage();
+
+  const experiences = [
+    {
+      id: 1,
+      company: t.experience.positions.lazada.company,
+      position: t.experience.positions.lazada.position,
+      period: t.experience.positions.lazada.period,
+      location: t.experience.positions.lazada.location,
+      achievements: t.experience.positions.lazada.achievements
+    },
+    {
+      id: 2,
+      company: t.experience.positions.alibaba.company,
+      position: t.experience.positions.alibaba.position,
+      period: t.experience.positions.alibaba.period,
+      location: t.experience.positions.alibaba.location,
+      achievements: t.experience.positions.alibaba.achievements
+    },
+    {
+      id: 3,
+      company: t.experience.positions.startup.company,
+      position: t.experience.positions.startup.position,
+      period: t.experience.positions.startup.period,
+      location: t.experience.positions.startup.location,
+      achievements: t.experience.positions.startup.achievements
+    }
+  ];
+
   return (
     <section className="section-container bg-white">
       <div className="space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-gray-900">Experience</h2>
+          <h2 className="text-3xl font-bold text-gray-900">{t.experience.title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            My journey in product management and technology, building impactful solutions 
-            for millions of users across Asia-Pacific.
+            {t.experience.description}
           </p>
         </div>
 
