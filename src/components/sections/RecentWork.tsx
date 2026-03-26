@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight, Users, TrendingUp, Clock } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { projects, Project } from '../data/projects';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { projects, Project } from '../../data/projects';
 
 const RecentWork: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);

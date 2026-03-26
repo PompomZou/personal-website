@@ -1,7 +1,7 @@
 import React from 'react';
 import { Brain, Code, BarChart3, Zap } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { techCategories } from '../data/techCategories';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { techCategories } from '../../data/techCategories';
 
 const Services: React.FC = () => {
   const { t } = useLanguage();

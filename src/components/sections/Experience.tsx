@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { createHighlightFunction, highlightConfigs } from '../data/highlights';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { createHighlightFunction, highlightConfigs } from '../../data/highlights';
 
 
 const Experience: React.FC = () => {

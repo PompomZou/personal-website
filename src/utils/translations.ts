@@ -1,4 +1,5 @@
 export interface Translation {
+  [key: string]: any;
   // Navigation
   nav: {
     home: string;
@@ -117,6 +118,13 @@ export interface Translation {
         achievements: string[];
       };
       chaoyue: {
+        position: string;
+        company: string;
+        period: string;
+        location: string;
+        achievements: string[];
+      };
+      bytedance: {
         position: string;
         company: string;
         period: string;
