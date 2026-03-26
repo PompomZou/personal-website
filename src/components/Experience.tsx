@@ -25,6 +25,14 @@ const Experience: React.FC = () => {
     },
     {
       id: 3,
+      company: t.experience.positions.chaoyue.company,
+      position: t.experience.positions.chaoyue.position,
+      period: t.experience.positions.chaoyue.period,
+      location: t.experience.positions.chaoyue.location,
+      achievements: t.experience.positions.chaoyue.achievements
+    },
+    {
+      id: 4,
       company: t.experience.positions.bytedance.company,
       position: t.experience.positions.bytedance.position,
       period: t.experience.positions.bytedance.period,
@@ -35,10 +43,10 @@ const Experience: React.FC = () => {
 
   // 提取数字和关键词的函数
   const highlightKeywords = (text: string) => {
-    // 匹配数字+%、数字+倍、数字+万、数字+单等模式
-    const numberPattern = /(\+?\d+(?:\.\d+)?[%倍万单次]?(?:\/日)?)/g;
+    // 匹配数字+%、数字+倍、数字+万、数字+单等模式，包括美元符号和pt单位
+    const numberPattern = /(\+?\d+(?:\.\d+)?[%倍万单次pt]?(?:\/日|\/day)?|\$\d+(?:,\d+)*(?:\/day)?)/g;
     // 匹配关键业务词汇
-    const keywordPattern = /(DAU|GMV|PV|CTR|AI|ToC|用户增长|精细化运营|风控治理|产品负责人|站内引流|站外精准渗透|权益换量|多渠道触达|分层人群|券核销|虚假流量|高质量订单|跨国跨业务|协同项目|A\/B测试|数据链路|配置后台|POI落地页|内容标签体系|质量分级模型)/g;
+    const keywordPattern = /(DAU|GMV|PV|CTR|AI|ToC|ToB|VR|SEO|ROI|Agent|Summary|用户增长|精细化运营|风控治理|产品负责人|站内引流|站外精准渗透|权益换量|多渠道触达|分层人群|券核销|虚假流量|高质量订单|跨国跨业务|协同项目|A\/B测试|数据链路|配置后台|POI落地页|内容标签体系|质量分级模型|网赚|商业化|黑产过滤|动态奖励|人群跃迁|基础架构|店铺装修|全流程|自动化链路|审核平台|监控看板|Meta Quest|FunFitLand|Guest Pass|Promo Code|漏斗分析|裂变工具|前台表达|后台基建|屏效|攻略社区|信息架构|交互体验)/g;
 
     let result = text;
 

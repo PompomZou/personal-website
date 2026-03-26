@@ -116,7 +116,7 @@ export interface Translation {
         location: string;
         achievements: string[];
       };
-      startup: {
+      chaoyue: {
         position: string;
         company: string;
         period: string;
@@ -408,38 +408,49 @@ export const translations: Record<'en' | 'zh', Translation> = {
       positions: {
         lazada: {
           position: 'E-commerce Product Manager',
-          company: 'Lazada (Alibaba International)',
+          company: 'Alibaba International Digital Commerce Group | Lazada',
           period: '2025.06 - Present',
           location: 'Hangzhou, China',
           achievements: [
             'ToC: Lazmall Channel Growth & User Operations - Product Owner',
-            'User Growth: Built "internal traffic + external precise penetration + rights exchange" growth system, connecting homepage traffic strategy, Push, influencer alliance/external advertising, game exchange, channel exchange and other multi-channel touchpoints, channel daily DAU +37.5%',
-            'Refined Operations: Built "layered user refined undertaking" operation system, coupon redemption GMV increased 8.5 times, accounting for channel GMV from 3% to 15%',
-            'Risk Control & Governance: Proactively promoted risk control strategy launch, cut 1600 orders/day fake traffic, high-quality orders doubled (600→1300 orders/day)',
-            'AI Product Landing: Built Chinese merchant AI operation workbench from 0 to 1, designed cross-country cross-business permission system, supporting 100+ people collaborative project delivery'
+            'User Growth: Built "internal traffic + external precise penetration + rights exchange" growth system, connecting homepage traffic strategy, Push, influencer alliance/external advertising, game exchange, channel exchange and other multi-channel touchpoints, channel daily DAU +37.5%; optimized recall path, 7-day retention improved by 10pt (55%→65%), depositing high-quality brand-minded users for the channel.',
+            'User Operations: Addressing the pain points of single channel operation tools and rough traffic undertaking, built "universal rights empowerment + layered user refined undertaking" operation system. Through rights conversion efficiency, task system optimization, user group undertaking optimization and other product functions and strategies, achieved channel buyer conversion rate +50%, daily GMV increased tenfold, coupon redemption GMV ratio from 3%→15%, task-guided order ratio from 11%→17% (+6pt), daily contribution of Chinese merchant goods orders >1500, achieving dual improvement of channel operation quality and scale growth.',
+            'Web Earning & Monetization: Led channel web earning system risk control governance and monetization efficiency. Risk control side, through black industry filtering and task strategies, saved channel budget $3000/day, improved ROI and brought incremental orders +2000; monetization side, through access to search advertising tasks, achieved balance between web earning expenditure and search advertising monetization revenue; user side, built check-in "dynamic rewards × user transition" mechanism, adapted reward amounts according to user activity, check-in users +9%, channel next-day retention +7pt, seven-day retention +5pt.',
+            'ToB: Chinese Merchant AI Operations Workbench - Infrastructure Lead, Agent Product Lead',
+            'AI Operations Workbench: Built Chinese merchant AI operations workbench from 0 to 1, designed standardized multi-level menu system and "BU×Country×Permission Level" cross-multiplication permission management system, achieving refined permission control covering 6 Southeast Asian countries × 6 business lines and one-stop integration of multiple business modules, supporting 100+ cross-border collaboration;',
+            'Store Decoration Agent: Led store fine decoration Agent product solution design and implementation, built "scraping → selecting → editing → uploading" full-process AI automation chain, with supporting review platform and monitoring dashboard, single store decoration time compressed from 30 minutes to 5 minutes, daily capacity increased from 15 to 150.'
+          ]
+        },
+        chaoyue: {
+          position: 'Product Manager (Intern)',
+          company: 'Chaoyue Vision (North American VR Fitness Startup)',
+          period: '2024.11 - 2025.02',
+          location: 'Beijing, China',
+          achievements: [
+            'Summary: Third product position in the company, responsible for user-side product design of VR fitness app FunFitLand on Meta Quest platform, reporting directly to founder, cross-China-US team collaboration, full English working environment.',
+            'Independently completed core functions from 0 to 1 launch including search/filter/favorites, workout records; collaborated with R&D to optimize website SEO and interaction structure; promoted Guest Pass, Promo Code and other viral tools through user funnel analysis, user scale grew from 10K+ to 50K+, paid user scale doubled.'
           ]
         },
         alibaba: {
           position: 'Product Manager (Intern)',
-          company: 'Alibaba Taotian Group · Information Flow Product Department',
+          company: 'Alibaba Taotian Group | Information Flow Product Department',
           period: '2024.05 - 2024.08',
           location: 'Hangzhou, China',
           achievements: [
-            'Responsible for Taobao homepage information flow recommendation reason optimization, unified card data pipeline and frontend display standards',
-            'Drove product iteration through A/B testing, homepage card exposure PV +1.3%, CTR +0.7%',
-            'Optimized recommendation reason configuration backend, reduced configuration error rate, improved launch process efficiency',
-            'Accumulated large-scale user product and data analysis experience on billion-DAU platform'
+            'Summary: Independently responsible for product design and optimization of Taobao homepage information flow recommendation reason module, internship results were adopted by the team for long-term use.',
+            'Frontend Expression Improvement: Addressing the problems of inconsistent display standards and high proportion of invalid reasons for homepage card recommendation reasons, led recommendation reason display standardization and data pipeline governance; improved screen efficiency by converging low-efficiency recommendation reasons and narrowing card height, optimized copywriting, colors and priority sorting, homepage card exposure PV +1.3%, CTR +0.7%;',
+            'Backend Infrastructure Optimization: Reconstructed recommendation reason configuration backend, simplified operation configuration process and reduced error rate, building reusable product infrastructure for subsequent large-scale iteration of recommendation reasons.'
           ]
         },
         bytedance: {
-          position: 'Product Manager (Intern)',
-          company: 'ByteDance · Douyin Local Life',
+          position: 'Product Operations (Intern)',
+          company: 'ByteDance | Douyin Life Services Content Community',
           period: '2023.08 - 2023.12',
           location: 'Beijing, China',
           achievements: [
-            'Optimized Douyin city POI landing pages and feed city entrances, built strategy content tag system and quality grading model',
-            'Covered 100+ cities, improved content ecosystem quality and user behavior conversion',
-            'Effective exposure PV +12.9%, optimized user experience through data-driven product decisions'
+            'Summary: Responsible for product strategy of Douyin city guide content community, led city POI landing page optimization and guide content system construction from 0 to 1, covering 100+ core cities nationwide.',
+            'Guide Community Optimization and Promotion: Product side, optimized city POI landing page information architecture and interaction experience, user behavior rate +7.5%, stay time and revisit rate significantly improved; traffic side, optimized feed city anchors, location lists, city cards and other new features launched, guide community DAU reached tens of millions.',
+            'Guide Content System Construction: Built guide content tag system from 0 to 1, constructed "quality grading × content classification × relevance" model, created guide content pool and achieved automated distribution in dual-column flow, forming high-quality, strong timeliness content ecosystem.'
           ]
         }
       }
@@ -711,38 +722,49 @@ export const translations: Record<'en' | 'zh', Translation> = {
       positions: {
         lazada: {
           position: '电商产品经理',
-          company: 'Lazada（阿里巴巴国际）',
+          company: '阿里巴巴国际数字商业集团 | Lazada',
           period: '2025年6月至今',
           location: '中国杭州',
           achievements: [
             'ToC：Lazmall频道用增&用户运营 - 产品负责人',
-            '用户增长：构建"站内引流 + 站外精准渗透 + 权益换量互补"的用增体系，打通首页引流策略、Push、达人联盟/站外广告唤端、游戏换量、频道换量等多渠道触达链路，频道日均DAU +37.5%',
-            '精细化运营：搭建"分层人群精细化承接"运营体系，券核销GMV增长8.5倍，占频道GMV从3%提升至15%',
-            '风控治理：主动推动风控策略上线，砍掉1600单/日虚假流量，高质量订单翻倍增长（600→1300单/日）',
-            'AI产品落地：从0到1搭建华商AI运营工作台，设计跨国跨业务权限体系，支撑100+人协同项目交付'
+            '用户增长：构建"站内引流 + 站外精准渗透 + 权益换量互补"的用增体系，打通首页引流策略、Push、达人联盟/站外广告唤端、游戏换量、频道换量等多渠道触达链路，频道日均DAU +37.5%；优化召回路径，7日留存提升10pt（55%→65%），为频道沉淀了高质量的品牌心智用户。',
+            '用户运营：针对频道运营工具单一、流量承接粗放的痛点，构建了"通用权益赋能+分层人群精细化承接"的运营体系。通过权益转化提效、任务体系优化、人群承接优化等产品功能和策略，实现频道买家转化率+50%，日均GMV翻十倍，券核销GMV占比由3%→15%，任务引导order占比由11%→17%（+6pt），日均贡献华商货盘订单>1500单，实现了频道经营质量与规模增长的双重提升。',
+            '网赚与商业化：主导频道网赚体系的风控治理与商业化提效。风控侧，通过黑产过滤和任务策略，节省频道预算3000$/day，提升ROI并带来增量订单+2000；商业化侧，通过接入搜索广告任务，实现网赚支出与搜索广告商业化收入的收支平衡；用户侧，搭建签到"动态奖励×人群跃迁"机制，根据用户活跃度适配奖励额度，签到人数+9%，频道次留+7pt、七留+5pt。',
+            'ToB：华商AI运营工作台 - 基础架构负责人、Agent产品负责人',
+            'AI运营工作台：从 0到1搭建华商 AI 运营工作台，设计标准化多级菜单体系与"BU×国家×权限等级"叉乘权限管理系统，实现覆盖东南亚 6国× 6条业务线的精细化权限管控与多业务模块一站式收口，支撑100+人跨国协同；',
+            '店铺装修Agent：主导店铺精装修Agent产品方案设计与落地，构建"扒图 →选图→修图→上传"全流程 AI自动化链路，配套审核平台与监控看板，单店装修时长从30分钟压缩至5分钟，日均产能从15个提升至150个。'
+          ]
+        },
+        chaoyue: {
+          position: '产品经理（实习）',
+          company: '超悦视界（北美VR健身初创公司）',
+          period: '2024年11月-2025年2月',
+          location: '中国北京',
+          achievements: [
+            'Summary：公司产品三号位，负责Meta Quest平台VR健身应用FunFitLand的用户侧产品设计，直接向创始人汇报，跨中美团队协作，全英文工作环境。',
+            '独立完成搜索/筛选/收藏、锻炼记录等核心功能从0到1上线；协同研发优化网站SEO与交互结构；通过用户漏斗分析推进Guest Pass、Promo Code等裂变工具上线，用户规模从1w+增长至5w+，付费用户规模翻倍。'
           ]
         },
         alibaba: {
           position: '产品经理（实习）',
-          company: '阿里巴巴淘天集团 · 信息流产品部',
+          company: '阿里巴巴淘天集团 | 信息流产品部',
           period: '2024年5月-8月',
           location: '中国杭州',
           achievements: [
-            '负责淘宝首页信息流推荐理由优化，统一卡片数据链路和前端展示标准',
-            '通过A/B测试驱动产品迭代，首页卡片曝光PV +1.3%，CTR +0.7%',
-            '优化推荐理由配置后台，降低配置失误率，提升上线流程效率',
-            '在DAU数亿级平台积累大规模用户产品与数据分析经验'
+            'Summary：独立负责淘宝首页信息流推荐理由模块的产品设计与优化，实习成果被团队长期沿用。',
+            '完善前台表达：针对首页卡片推荐理由展示规范不统一、无效理由占比高的问题，主导推荐理由展示标准化与数据链路治理；通过收敛低效推荐理由、缩窄卡片高度提升屏效，优化文案、颜色与优先级排序，首页卡片曝光 PV+1.3%，CTR+0.7%；',
+            '优化后台基建：重构推荐理由配置后台，简化运营配置流程并降低失误率，为后续推荐理由的规模化迭代搭建了可复用的产品基础设施。'
           ]
         },
         bytedance: {
-          position: '产品经理（实习）',
-          company: '字节跳动 · 抖音本地生活',
+          position: '产品运营（实习）',
+          company: '字节跳动 | 抖音生活服务部 内容社区',
           period: '2023年8月-12月',
           location: '中国北京',
           achievements: [
-            '优化抖音城市POI落地页和feed流城市入口，搭建攻略内容标签体系与质量分级模型',
-            '覆盖100+城市，提升内容生态质量与用户行为转化',
-            '有效曝光PV +12.9%，通过数据驱动的产品决策优化用户体验'
+            'Summary：负责抖音城市攻略内容社区的产品策略，主导城市POI落地页优化及攻略内容体系从0到1搭建，覆盖全国 100+核心城市。',
+            '攻略社区优化和推广：产品侧，优化城市 POI 落地页信息架构与交互体验，用户有行为率+7.5%，停留时长与复访率显著提升；流量侧，优化feed流城市锚点、地点清单、城市卡等新功能上线，攻略社区DAU达到千万级。',
+            '攻略内容体系建设： 从0到1搭建攻���内容标签体系，构建"质量分级×内容分类×相关性"模型，打造攻略内容池并实现双列流自动化分发，形成高质量、强时效性的内容生态。'
           ]
         }
       }
