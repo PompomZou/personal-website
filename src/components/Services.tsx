@@ -1,28 +1,7 @@
 import React from 'react';
 import { Brain, Code, BarChart3, Zap } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const services = [
-  {
-    icon: Brain,
-    title: 'AI Operations',
-    description: 'Design and implement AI-powered operational systems that scale business processes and improve efficiency.'
-  },
-  {
-    icon: BarChart3,
-    title: 'Product Growth',
-    description: 'Data-driven product strategies that optimize user experience and drive sustainable business growth.'
-  },
-  {
-    icon: Code,
-    title: 'Creative Coding',
-    description: 'Interactive experiences using Three.js, WebGL, and modern web technologies for engaging user interfaces.'
-  },
-  {
-    icon: Zap,
-    title: 'Process Optimization',
-    description: 'Streamline workflows and automate repetitive tasks to maximize team productivity and output quality.'
-  }
-];
 
 const techStack = [
   'Three.js', 'React', 'TypeScript', 'Python', 'SQL', 'Figma', 
@@ -31,16 +10,40 @@ const techStack = [
 ];
 
 const Services: React.FC = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Brain,
+      title: t.services.items.aiOperations.title,
+      description: t.services.items.aiOperations.description
+    },
+    {
+      icon: BarChart3,
+      title: t.services.items.productGrowth.title,
+      description: t.services.items.productGrowth.description
+    },
+    {
+      icon: Code,
+      title: t.services.items.creativeCoding.title,
+      description: t.services.items.creativeCoding.description
+    },
+    {
+      icon: Zap,
+      title: t.services.items.processOptimization.title,
+      description: t.services.items.processOptimization.description
+    }
+  ];
+
   return (
     <section className="section-container">
       <div className="space-y-16">
         {/* What I Do */}
         <div className="space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-gray-900">What I Do</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{t.services.title}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Combining product management expertise with creative technology 
-              to build innovative solutions that drive business impact.
+              {t.services.description}
             </p>
           </div>
 
@@ -74,9 +77,9 @@ const Services: React.FC = () => {
         {/* Tech Stack */}
         <div className="space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-gray-900">Tech Stack</h2>
+            <h2 className="text-3xl font-bold text-gray-900">{t.services.techStack}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Tools and technologies I use to bring ideas to life.
+              {t.services.techStackDesc}
             </p>
           </div>
 

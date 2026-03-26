@@ -1,15 +1,17 @@
 import React from 'react';
 import { Mail, MessageCircle, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="section-container">
       <div className="space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-gray-900">Let's Connect</h2>
+          <h2 className="text-3xl font-bold text-gray-900">{t.contact.title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Always open to discussing new opportunities, collaborations, 
-            and innovative projects. Reach out and let's create something extraordinary together.
+            {t.contact.description}
           </p>
         </div>
 
@@ -22,7 +24,7 @@ const Contact: React.FC = () => {
               <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
             </div>
             <div className="space-y-1">
-              <h3 className="font-semibold text-gray-900">Email</h3>
+              <h3 className="font-semibold text-gray-900">{t.contact.email}</h3>
               <p className="text-sm text-gray-600">daisy@example.com</p>
             </div>
             <ExternalLink className="w-4 h-4 text-gray-400 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -36,7 +38,7 @@ const Contact: React.FC = () => {
               <MessageCircle className="w-6 h-6 text-green-600 group-hover:text-white transition-colors duration-300" />
             </div>
             <div className="space-y-1">
-              <h3 className="font-semibold text-gray-900">WeChat</h3>
+              <h3 className="font-semibold text-gray-900">{t.contact.wechat}</h3>
               <p className="text-sm text-gray-600">@daisy_zou</p>
             </div>
             <ExternalLink className="w-4 h-4 text-gray-400 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -50,7 +52,7 @@ const Contact: React.FC = () => {
               <Linkedin className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors duration-300" />
             </div>
             <div className="space-y-1">
-              <h3 className="font-semibold text-gray-900">LinkedIn</h3>
+              <h3 className="font-semibold text-gray-900">{t.contact.linkedin}</h3>
               <p className="text-sm text-gray-600">zou-yujia</p>
             </div>
             <ExternalLink className="w-4 h-4 text-gray-400 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -64,7 +66,7 @@ const Contact: React.FC = () => {
               <Github className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" />
             </div>
             <div className="space-y-1">
-              <h3 className="font-semibold text-gray-900">GitHub</h3>
+              <h3 className="font-semibold text-gray-900">{t.contact.github}</h3>
               <p className="text-sm text-gray-600">daisy-zou</p>
             </div>
             <ExternalLink className="w-4 h-4 text-gray-400 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -74,7 +76,7 @@ const Contact: React.FC = () => {
         {/* Footer */}
         <div className="text-center pt-12 border-t border-gray-200">
           <p className="text-gray-500 text-sm">
-            © 2024 Zou Yujia (Daisy). Crafted with passion for innovation and excellence.
+            {t.contact.footer}
           </p>
         </div>
       </div>

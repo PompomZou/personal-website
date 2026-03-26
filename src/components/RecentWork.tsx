@@ -1,76 +1,77 @@
 import React, { useState } from 'react';
 import { ExternalLink, ArrowRight, Users, TrendingUp, Clock } from 'lucide-react';
-
-const projects = [
-  {
-    id: 1,
-    title: 'LazCortex AI Operations',
-    industry: 'E-commerce',
-    description: 'AI-powered operations workbench for Lazada, streamlining seller management and automated decision-making processes.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    tags: ['AI/ML', 'Operations', 'Dashboard'],
-    metrics: {
-      users: '100K+ merchants',
-      impact: '40% efficiency gain',
-      timeline: '18 months'
-    },
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'Creative Coding Portfolio',
-    industry: 'Creative Tech',
-    description: 'Interactive WebGL experiences using Three.js, showcasing the intersection of technology and art.',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop',
-    tags: ['Three.js', 'WebGL', 'Creative'],
-    metrics: {
-      users: '10K+ visitors',
-      impact: '95% engagement',
-      timeline: '6 months'
-    },
-    featured: false
-  },
-  {
-    id: 3,
-    title: 'E-commerce Optimization Suite',
-    industry: 'Retail',
-    description: 'Comprehensive analytics and optimization tools for improving conversion rates and user experience.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    tags: ['Analytics', 'UX', 'Conversion'],
-    metrics: {
-      users: '50K+ sellers',
-      impact: '25% conversion boost',
-      timeline: '12 months'
-    },
-    featured: true
-  },
-  {
-    id: 4,
-    title: 'AI Agent Framework',
-    industry: 'Technology',
-    description: 'Modular framework for building and deploying AI agents across various business applications.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-    tags: ['AI Agents', 'Framework', 'Automation'],
-    metrics: {
-      users: '15+ teams',
-      impact: '60% dev time saved',
-      timeline: '9 months'
-    },
-    featured: false
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 const RecentWork: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      id: 1,
+      title: t.work.projects.lazcortex.title,
+      industry: t.work.projects.lazcortex.industry,
+      description: t.work.projects.lazcortex.description,
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      tags: ['AI/ML', 'Operations', 'Dashboard'],
+      metrics: {
+        users: t.work.projects.lazcortex.users,
+        impact: t.work.projects.lazcortex.impact,
+        timeline: t.work.projects.lazcortex.timeline
+      },
+      featured: true
+    },
+    {
+      id: 2,
+      title: t.work.projects.creative.title,
+      industry: t.work.projects.creative.industry,
+      description: t.work.projects.creative.description,
+      image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop',
+      tags: ['Three.js', 'WebGL', 'Creative'],
+      metrics: {
+        users: t.work.projects.creative.users,
+        impact: t.work.projects.creative.impact,
+        timeline: t.work.projects.creative.timeline
+      },
+      featured: false
+    },
+    {
+      id: 3,
+      title: t.work.projects.optimization.title,
+      industry: t.work.projects.optimization.industry,
+      description: t.work.projects.optimization.description,
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+      tags: ['Analytics', 'UX', 'Conversion'],
+      metrics: {
+        users: t.work.projects.optimization.users,
+        impact: t.work.projects.optimization.impact,
+        timeline: t.work.projects.optimization.timeline
+      },
+      featured: true
+    },
+    {
+      id: 4,
+      title: t.work.projects.framework.title,
+      industry: t.work.projects.framework.industry,
+      description: t.work.projects.framework.description,
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+      tags: ['AI Agents', 'Framework', 'Automation'],
+      metrics: {
+        users: t.work.projects.framework.users,
+        impact: t.work.projects.framework.impact,
+        timeline: t.work.projects.framework.timeline
+      },
+      featured: false
+    }
+  ];
 
   return (
     <section className="section-container bg-white dark:bg-gray-800">
       <div className="space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Featured Work</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.work.title}</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A selection of impactful projects that demonstrate my expertise in AI operations,
-            product strategy, and creative technology solutions.
+            {t.work.description}
           </p>
         </div>
 
@@ -88,7 +89,7 @@ const RecentWork: React.FC = () => {
               {project.featured && (
                 <div className="absolute top-4 left-4 z-10">
                   <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-medium px-3 py-1 rounded-full">
-                    Featured
+                    {t.work.featured}
                   </span>
                 </div>
               )}
@@ -149,7 +150,7 @@ const RecentWork: React.FC = () => {
 
         <div className="text-center">
           <button className="btn-secondary group">
-            View All Projects
+            {t.work.viewAll}
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

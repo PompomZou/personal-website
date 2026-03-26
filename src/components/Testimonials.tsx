@@ -1,46 +1,50 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const testimonials = [
-  {
-    id: 1,
-    name: 'Sarah Chen',
-    role: 'Engineering Director',
-    company: 'Lazada',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
-    content: 'Daisy has an exceptional ability to translate complex AI concepts into practical business solutions. Her leadership on LazCortex transformed our operational efficiency.',
-    rating: 5
-  },
-  {
-    id: 2,
-    name: 'Michael Zhang',
-    role: 'VP of Product',
-    company: 'Alibaba International',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
-    content: 'Working with Daisy is a masterclass in product strategy. She combines analytical rigor with creative problem-solving in ways that consistently deliver results.',
-    rating: 5
-  },
-  {
-    id: 3,
-    name: 'Lisa Wang',
-    role: 'UX Research Lead',
-    company: 'Tech Startup',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
-    content: 'Daisy\'s user-centric approach and attention to detail elevated our product experience. Her collaborative style makes cross-functional work seamless.',
-    rating: 5
-  }
-];
 
 const Testimonials: React.FC = () => {
+  const { t } = useLanguage();
+
+  const testimonials = [
+    {
+      id: 1,
+      name: t.testimonials.items.sarah.name,
+      role: t.testimonials.items.sarah.role,
+      company: t.testimonials.items.sarah.company,
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+      content: t.testimonials.items.sarah.content,
+      rating: 5
+    },
+    {
+      id: 2,
+      name: t.testimonials.items.michael.name,
+      role: t.testimonials.items.michael.role,
+      company: t.testimonials.items.michael.company,
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+      content: t.testimonials.items.michael.content,
+      rating: 5
+    },
+    {
+      id: 3,
+      name: t.testimonials.items.lisa.name,
+      role: t.testimonials.items.lisa.role,
+      company: t.testimonials.items.lisa.company,
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+      content: t.testimonials.items.lisa.content,
+      rating: 5
+    }
+  ];
+
   return (
     <section className="section-container">
       <div className="space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-            What Colleagues Say
+            {t.testimonials.title}
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Feedback from team members and collaborators across different projects and companies.
+            {t.testimonials.description}
           </p>
         </div>
 
@@ -95,13 +99,13 @@ const Testimonials: React.FC = () => {
         <div className="text-center pt-8">
           <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 space-y-4">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Ready to Work Together?
+              {t.testimonials.readyTitle}
             </h3>
             <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto">
-              Let's discuss how we can create exceptional products that drive real business impact.
+              {t.testimonials.readyDesc}
             </p>
             <button className="btn-primary">
-              Start a Conversation
+              {t.testimonials.startConversation}
             </button>
           </div>
         </div>
