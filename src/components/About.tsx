@@ -42,7 +42,7 @@ const About: React.FC = () => {
               {t.about.title}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t.about.description}
+              我是Lazada的电商产品经理，专注跨境电商用户增长与AI产品落地。清华苏世民学者，具备"C端增长运营 + B端AI产品 + 跨国协同"的复合能力，驱动东南亚6国业务增长。
             </p>
           </div>
 

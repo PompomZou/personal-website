@@ -3,6 +3,7 @@ export interface Translation {
   nav: {
     home: string;
     about: string;
+    education: string;
     work: string;
     experience: string;
     services: string;
@@ -226,6 +227,87 @@ export interface Translation {
       };
     };
   };
+
+  // Education Section
+  education: {
+    title: string;
+    description: string;
+    highlights: string;
+    achievements: string;
+    positions: {
+      tsinghua: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string;
+        gpa: string;
+        achievements: string[];
+      };
+      ruc: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string;
+        gpa: string;
+        achievements: string[];
+      };
+      ucla: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string;
+        gpa: string;
+        achievements: string[];
+      };
+    };
+  };
+
+  // Honors Section
+  honors: {
+    title: string;
+    description: string;
+    summary: string;
+    categories: {
+      national: {
+        title: string;
+        count: string;
+        items: string[];
+      };
+      academic: {
+        title: string;
+        count: string;
+        items: string[];
+      };
+      recognition: {
+        title: string;
+        count: string;
+        items: string[];
+      };
+    };
+  };
+
+  // Product Philosophy Section
+  philosophy: {
+    title: string;
+    description: string;
+    items: {
+      dataFirst: {
+        title: string;
+        description: string;
+      };
+      userCentric: {
+        title: string;
+        description: string;
+      };
+      iterative: {
+        title: string;
+        description: string;
+      };
+    };
+  };
 }
 
 export const translations: Record<'en' | 'zh', Translation> = {
@@ -233,6 +315,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
     nav: {
       home: 'Home',
       about: 'About',
+      education: 'Education',
       work: 'Work',
       experience: 'Experience',
       services: 'Services',
@@ -336,36 +419,36 @@ export const translations: Record<'en' | 'zh', Translation> = {
           ]
         },
         alibaba: {
-          position: 'Product Manager',
-          company: 'Alibaba Group',
-          period: '2020 - 2022',
+          position: 'Product Manager (Intern)',
+          company: 'Alibaba Taotian Group',
+          period: '2024.05 - 2024.08',
           location: 'Hangzhou, China',
           achievements: [
-            'Designed and launched merchant onboarding platform with 95% completion rate',
-            'Collaborated with data science teams to build predictive analytics tools',
-            'Optimized user experience flows resulting in 25% increase in conversion',
-            'Mentored junior product managers and established PM best practices'
+            'Optimized Taobao homepage feed recommendation reasons, unified data pipeline and frontend standards',
+            'Drove product iteration through A/B testing, achieving +1.3% exposure PV and +0.7% CTR',
+            'Improved recommendation configuration backend, reducing error rates and enhancing launch efficiency',
+            'Gained experience in large-scale user products and data analysis on billion-DAU platform'
           ]
         },
-        startup: {
-          position: 'Associate Product Manager',
-          company: 'Tech Startup',
-          period: '2019 - 2020',
-          location: 'Shanghai, China',
-          achievements: [
-            'Built MVP for B2B SaaS platform from concept to launch',
-            'Conducted user research and competitive analysis for market positioning',
-            'Worked closely with engineering teams using agile methodologies',
-            'Achieved product-market fit with 80% user retention rate'
-          ]
-        }
+      startup: {
+        position: 'Co-founder & Product Lead',
+        company: 'SuperVision VR (Startup)',
+        period: '2023 - 2024',
+        location: 'Beijing, China',
+        achievements: [
+          'Co-founded VR startup focused on immersive educational experiences',
+          'Led product development from concept to MVP launch',
+          'Secured seed funding and established partnerships with educational institutions',
+          'Built cross-functional team and established product development processes'
+        ]
+      }
       }
     },
     services: {
       title: 'What I Do',
       description: 'Combining product management expertise with creative technology to build innovative solutions that drive business impact.',
-      techStack: 'Tech Stack',
-      techStackDesc: 'Tools and technologies I use to bring ideas to life.',
+      techStack: 'Tools & Skills',
+      techStackDesc: 'Core tools and technologies I use in product management and data analysis.',
       items: {
         aiOperations: {
           title: 'AI Operations',
@@ -454,12 +537,88 @@ export const translations: Record<'en' | 'zh', Translation> = {
           description: 'Build systems and processes that grow with your business needs.'
         }
       }
+    },
+    education: {
+      title: 'Education',
+      description: 'Academic foundation in management and international communications, with global perspective from top institutions.',
+      highlights: 'Key Highlights',
+      achievements: 'Achievements',
+      positions: {
+        tsinghua: {
+          school: 'Tsinghua University - Schwarzman Scholars',
+          degree: 'Master of Management',
+          period: '2024.08 - 2025.06',
+          location: 'Beijing, China',
+          highlights: 'Full scholarship (3% acceptance rate, 140/4000+ applicants)',
+          gpa: '',
+          achievements: ['Full Scholarship', 'Global Leadership Program', 'Cross-Cultural Management']
+        },
+        ruc: {
+          school: 'Renmin University of China',
+          degree: 'International Journalism & English (Double Degree)',
+          period: '2020.09 - 2024.06',
+          location: 'Beijing, China',
+          highlights: 'GPA 3.83/4.0, Major Ranking 1/15, Overall Ranking 9/161 (Top 6%)',
+          gpa: 'GPA 3.83/4.0',
+          achievements: ['Beijing Outstanding Graduate', 'National Scholarship', 'Academic Excellence Award']
+        },
+        ucla: {
+          school: 'UCLA',
+          degree: 'Business Management & Marketing (Exchange)',
+          period: '2024 Winter',
+          location: 'Los Angeles, USA',
+          highlights: 'GPA 4.0/4.0',
+          gpa: 'GPA 4.0/4.0',
+          achievements: ['Dean\'s List', 'International Exchange Scholar']
+        }
+      }
+    },
+    honors: {
+      title: 'Honors & Awards',
+      description: 'Recognition for academic excellence, creative achievements, and leadership contributions.',
+      summary: '22+ National Awards & Academic Honors',
+      categories: {
+        national: {
+          title: 'National Awards',
+          count: '22+',
+          items: ['National Advertising Competition Gold', 'PR Competition Silver', 'Creative Design Awards']
+        },
+        academic: {
+          title: 'Academic Excellence',
+          count: '3',
+          items: ['National Scholarship', 'Beijing Outstanding Graduate', 'Academic Excellence']
+        },
+        recognition: {
+          title: 'Leadership',
+          count: '5+',
+          items: ['Student Leadership Award', 'Community Service Recognition', 'Innovation Award']
+        }
+      }
+    },
+    philosophy: {
+      title: 'My Product Philosophy',
+      description: 'Core principles that guide my approach to product management and user experience design.',
+      items: {
+        dataFirst: {
+          title: 'Data-Driven Decisions',
+          description: 'Every product decision backed by user research, A/B testing, and quantifiable metrics to ensure measurable business impact.'
+        },
+        userCentric: {
+          title: 'User-Centric Design',
+          description: 'Deep empathy for user needs drives feature prioritization, ensuring solutions solve real problems and create genuine value.'
+        },
+        iterative: {
+          title: 'Iterative Excellence',
+          description: 'Continuous improvement through rapid prototyping, user feedback loops, and agile development methodologies.'
+        }
+      }
     }
   },
   zh: {
     nav: {
       home: '首页',
       about: '关于我',
+      education: '教育',
       work: '项目',
       experience: '经历',
       services: '能力',
@@ -575,15 +734,15 @@ export const translations: Record<'en' | 'zh', Translation> = {
           ]
         },
         startup: {
-          position: '产品经理（实习）',
-          company: '字节跳动 · 抖音生活服务',
-          period: '2023年8月-12月',
+          position: '联合创始人 & 产品负责人',
+          company: '超悦视界（VR创业公司）',
+          period: '2023年-2024年',
           location: '中国北京',
           achievements: [
-            '优化抖音城市POI落地页，有效曝光PV +12.9%，用户有行为率 +7.5%',
-            '优化feed流城市入口CTR +3%，推进地点清单、城市卡等新功能上线',
-            '搭建攻略内容标签体系与质量分级模型，实现内容池自动化展示',
-            '项目覆盖100+城市，建立高质量内容生态管理机制'
+            '联合创立专注沉浸式教育体验的VR创业公司',
+            '主导产品从概念到MVP的全流程开发',
+            '获得种子轮融资，与教育机构建立合作伙伴关系',
+            '组建跨职能团队，建立产品开发流程和标准'
           ]
         }
       }
@@ -592,7 +751,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
       title: '专业能力',
       description: '结合产品管理、数据分析与AI产品经验，构建驱动业务增长的产品解决方案。',
       techStack: '工具与技能',
-      techStackDesc: '日常产品与数据工作中使用的核心工具。',
+      techStackDesc: '产品管理和数据分析工作中使用的核心工具。',
       items: {
         aiOperations: {
           title: 'AI产品规划',
@@ -679,6 +838,81 @@ export const translations: Record<'en' | 'zh', Translation> = {
         scalable: {
           title: '快速学习',
           description: '清华苏世民学者，从新闻到产品跨界转型，具备快速进入新领域并产出成果的能力。'
+        }
+      }
+    },
+    education: {
+      title: '教育背景',
+      description: '清华苏世民学者，人大国际新闻与英语双学位，具备全球视野和跨文化沟通能力。',
+      highlights: '核心亮点',
+      achievements: '主要成就',
+      positions: {
+        tsinghua: {
+          school: '清华大学苏世民书院',
+          degree: '管理学硕士',
+          period: '2024.08 - 2025.06',
+          location: '北京',
+          highlights: '全额奖学金（录取率3%，140/4000+申请者）',
+          gpa: '',
+          achievements: ['全额奖学金', '全球领导力项目', '跨文化管理']
+        },
+        ruc: {
+          school: '中国人民大学',
+          degree: '国际新闻 & 英语双学位',
+          period: '2020.09 - 2024.06',
+          location: '北京',
+          highlights: 'GPA 3.83/4.0，专业排名 1/15，院总排名 9/161（前6%）',
+          gpa: 'GPA 3.83/4.0',
+          achievements: ['北京市优秀毕业生', '国家奖学金', '学术优秀奖']
+        },
+        ucla: {
+          school: 'UCLA',
+          degree: 'Business Management & Marketing（交换）',
+          period: '2024冬季学期',
+          location: '洛杉矶',
+          highlights: 'GPA 4.0/4.0',
+          gpa: 'GPA 4.0/4.0',
+          achievements: ['院长荣誉榜', '国际交换学者']
+        }
+      }
+    },
+    honors: {
+      title: '荣誉与奖项',
+      description: '学术卓越、创意成就和领导力贡献的认可。',
+      summary: '22项国家级奖项 & 学术荣誉',
+      categories: {
+        national: {
+          title: '国家级奖项',
+          count: '22项',
+          items: ['大广赛全国一等奖', '公关大赛全国二等奖', '创意设计奖']
+        },
+        academic: {
+          title: '学术荣誉',
+          count: '3项',
+          items: ['国家奖学金', '北京市优秀毕业生', '学术优秀奖']
+        },
+        recognition: {
+          title: '领导力认可',
+          count: '5项+',
+          items: ['学生领导力奖', '社区服务认可', '创新奖']
+        }
+      }
+    },
+    philosophy: {
+      title: '我的产品理念',
+      description: '指导我进行产品管理和用户体验设计的核心原则。',
+      items: {
+        dataFirst: {
+          title: '数据驱动决策',
+          description: '每个产品决策都基于用户研究、A/B测试和可量化指标，确保可衡量的业务影响。'
+        },
+        userCentric: {
+          title: '用户中心设计',
+          description: '对用户需求的深度共情驱动功能优先级，确保解决方案解决真实问题并创造真正价值。'
+        },
+        iterative: {
+          title: '迭代追求卓越',
+          description: '通过快速原型、用户反馈循环和敏捷开发方法论持续改进。'
         }
       }
     }

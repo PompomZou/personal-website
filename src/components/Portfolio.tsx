@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
+import Education from './Education';
+import Honors from './Honors';
 import RecentWork from './RecentWork';
 import Experience from './Experience';
 import Services from './Services';
 import Testimonials from './Testimonials';
+import ProductPhilosophy from './ProductPhilosophy';
 import Contact from './Contact';
 
 const Portfolio: React.FC = () => {
@@ -40,6 +43,12 @@ const Portfolio: React.FC = () => {
         <section id="about">
           <About />
         </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="honors">
+          <Honors />
+        </section>
         <section id="work">
           <RecentWork />
         </section>
@@ -52,6 +61,7 @@ const Portfolio: React.FC = () => {
         <section id="testimonials">
           <Testimonials />
         </section>
+        <ProductPhilosophy />
         <section id="contact">
           <Contact />
         </section>

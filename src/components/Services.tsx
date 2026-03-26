@@ -3,10 +3,23 @@ import { Brain, Code, BarChart3, Zap } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 
-const techStack = [
-  'Three.js', 'React', 'TypeScript', 'Python', 'SQL', 'Figma', 
-  'Cursor', 'VS Code', 'Notion', 'Slack', 'Jira', 'Analytics',
-  'Machine Learning', 'WebGL', 'Node.js', 'PostgreSQL'
+const techCategories = [
+  {
+    title: '产品工具',
+    tools: ['Figma', 'Axure', 'Sketch', 'Notion', 'Miro']
+  },
+  {
+    title: '数据分析',
+    tools: ['SQL', 'Python', 'SPSS', 'Tableau', 'Excel']
+  },
+  {
+    title: 'AI工具',
+    tools: ['ChatGPT', 'Claude', 'Midjourney', 'Cursor', 'GitHub Copilot']
+  },
+  {
+    title: '协作工具',
+    tools: ['Slack', 'DingTalk', 'Jira', 'Confluence', 'Lark']
+  }
 ];
 
 const Services: React.FC = () => {
@@ -77,23 +90,34 @@ const Services: React.FC = () => {
         {/* Tech Stack */}
         <div className="space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-gray-900">{t.services.techStack}</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.services.techStack}</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               {t.services.techStackDesc}
             </p>
           </div>
 
-          <div className="relative overflow-hidden bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
-            <div className="flex animate-marquee space-x-8">
-              {[...techStack, ...techStack].map((tech, index) => (
-                <div
-                  key={`${tech}-${index}`}
-                  className="flex-shrink-0 px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap"
-                >
-                  {tech}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {techCategories.map((category, categoryIndex) => (
+              <div
+                key={category.title}
+                className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 space-y-4 animate-slide-up"
+                style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+              >
+                <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 text-center">
+                  {category.title}
+                </h3>
+                <div className="space-y-2">
+                  {category.tools.map((tool) => (
+                    <div
+                      key={tool}
+                      className="px-3 py-2 bg-gray-50 dark:bg-gray-700 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 text-center"
+                    >
+                      {tool}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

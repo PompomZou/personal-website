@@ -133,6 +133,31 @@ const RecentWork: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                   {project.description}
                 </p>
+
+                {/* Core Results Highlight */}
+                <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4 border-l-4 border-purple-500">
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                        {project.metrics.users}
+                      </div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">用户规模</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                        {project.metrics.impact}
+                      </div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">核心成果</div>
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                        {project.metrics.timeline}
+                      </div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">项目周期</div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
