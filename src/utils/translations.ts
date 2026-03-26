@@ -440,7 +440,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
     },
     contact: {
       title: "Let's Connect",
-      description: 'Always open to discussing new opportunities, collaborations, and innovative projects. Reach out and let\\'s create something extraordinary together.',
+      description: 'Always open to discussing new opportunities, collaborations, and innovative projects. Reach out and let\'s create something extraordinary together.',
       email: 'Email',
       wechat: 'WeChat',
       linkedin: 'LinkedIn',
