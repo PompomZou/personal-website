@@ -1,7 +1,10 @@
 import React from 'react';
 import { MapPin, Calendar, Briefcase, ArrowDown } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   const scrollToWork = () => {
     const element = document.getElementById('work');
     if (element) {
@@ -35,13 +38,13 @@ const Hero: React.FC = () => {
           {/* Name & Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-              Zou Yujia / Daisy
+              {t.hero.title}
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              AI-Powered Product Manager & Creative Technologist
+              {t.hero.subtitle}
             </p>
             <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Transforming e-commerce operations through intelligent automation and user-centered design
+              {t.hero.description}
             </p>
           </div>
 
@@ -49,45 +52,45 @@ const Hero: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <div className="badge">
               <MapPin className="w-3 h-3 mr-1" />
-              Hangzhou, China
+              {t.hero.location}
             </div>
             <div className="badge">
               <Briefcase className="w-3 h-3 mr-1" />
-              Lazada (Alibaba International)
+              {t.hero.company}
             </div>
             <div className="badge bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 border-green-200 dark:border-green-700">
               <Calendar className="w-3 h-3 mr-1" />
-              Available for Projects
+              {t.hero.availability}
             </div>
           </div>
 
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-12">
             <div className="text-center space-y-2 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white">5+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
-              <div className="text-xs text-gray-500 dark:text-gray-500">Product & AI Operations</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white">{t.hero.yearsExperience}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t.about.highlights.experience}</div>
+              <div className="text-xs text-gray-500 dark:text-gray-500">{t.hero.experienceDesc}</div>
             </div>
             <div className="text-center space-y-2 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white">100K+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Users Impacted</div>
-              <div className="text-xs text-gray-500 dark:text-gray-500">Across Southeast Asia</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white">{t.hero.usersImpacted}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t.about.highlights.users}</div>
+              <div className="text-xs text-gray-500 dark:text-gray-500">{t.hero.usersDesc}</div>
             </div>
             <div className="text-center space-y-2 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white">40%</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Efficiency Boost</div>
-              <div className="text-xs text-gray-500 dark:text-gray-500">Through AI Implementation</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white">{t.hero.efficiencyBoost}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">{t.about.highlights.efficiency}</div>
+              <div className="text-xs text-gray-500 dark:text-gray-500">{t.hero.efficiencyDesc}</div>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <button onClick={scrollToWork} className="btn-primary group">
-              View My Work
+              {t.hero.viewWork}
               <ArrowDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
             </button>
             <button onClick={scrollToContact} className="btn-secondary">
-              Get In Touch
+              {t.hero.getInTouch}
             </button>
           </div>
 

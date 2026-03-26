@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun, Download } from 'lucide-react';
+import { Menu, X, Moon, Sun, Download, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavigationProps {
   darkMode: boolean;
@@ -9,14 +10,15 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'work', label: 'Work' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'services', label: 'Services' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: t.nav.home },
+    { id: 'about', label: t.nav.about },
+    { id: 'work', label: t.nav.work },
+    { id: 'experience', label: t.nav.experience },
+    { id: 'services', label: t.nav.services },
+    { id: 'contact', label: t.nav.contact }
   ];
 
   useEffect(() => {
@@ -51,6 +53,10 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
     link.href = '#';
     link.download = 'Zou_Yujia_Resume.pdf';
     link.click();
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'zh' : 'en');
   };
 
   return (
@@ -93,7 +99,14 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
               <Download className="w-4 h-4 mr-2" />
-              Resume
+              {t.nav.resume}
+            </button>
+            <button
+              onClick={toggleLanguage}
+              className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              title={language === 'en' ? '中文' : 'English'}
+            >
+              <Globe className="w-5 h-5" />
             </button>
             <button
               onClick={toggleDarkMode}
@@ -105,6 +118,13 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleLanguage}
+              className="p-2 text-gray-600 dark:text-gray-400"
+              title={language === 'en' ? '中文' : 'English'}
+            >
+              <Globe className="w-5 h-5" />
+            </button>
             <button
               onClick={toggleDarkMode}
               className="p-2 text-gray-600 dark:text-gray-400"
@@ -142,7 +162,7 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
                 className="flex items-center w-full px-3 py-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download Resume
+                {t.nav.resume}
               </button>
             </div>
           </div>
