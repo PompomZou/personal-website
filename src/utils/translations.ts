@@ -265,6 +265,35 @@ export interface Translation {
     };
   };
   
+  // Education Section
+  education: {
+    title: string;
+    description: string;
+    positions: {
+      tsinghua: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string[];
+      };
+      ruc: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string[];
+      };
+      ucla: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string[];
+      };
+    };
+  };
+
   // Honors Section
   honors: {
     title: string;
@@ -575,19 +604,8 @@ export const translations: Record<'en' | 'zh', Translation> = {
         }
       }
     }
-  },
-  zh: {
-    nav: {
-      home: '首页',
-      about: '关于我',
-      work: '项目',
-      education: '教育',
-      honors: '荣誉',
-      experience: '经历',
-      services: '能力',
-      contact: '联系',
-      resume: '简历'
-    },
+  }
+};
     hero: {
       title: '邹雨珈 / Daisy',
       subtitle: '跨境电商产品经理 | 清华苏世民学者',
@@ -1161,6 +1179,89 @@ export const translations: Record<'en' | 'zh', Translation> = {
         title: '跨职能协作',
         description: '通过清晰沟通让不同团队和利益相关者朝着共同目标努力。'
       }
+    }
+  },
+
+  education: {
+    title: '教育背景',
+    description: '在中美顶尖院校的管理学、新闻学和商科学习经历。',
+    positions: {
+      tsinghua: {
+        school: '清华大学苏世民书院',
+        degree: '管理学硕士',
+        period: '2024.08 - 2025.06',
+        location: '北京',
+        highlights: [
+          '全额奖学金（录取率3%，140/4000+申请者）',
+          '专注于全球管理与领导力',
+          '跨文化团队协作项目经验'
+        ]
+      },
+      ruc: {
+        school: '中国人民大学',
+        degree: '国际新闻 & 英语双学位',
+        period: '2020.09 - 2024.06',
+        location: '北京',
+        highlights: [
+          '双学位优秀毕业生',
+          '新闻传播学院优秀学生',
+          '英语专业八级证书'
+        ]
+      },
+      ucla: {
+        school: '加州大学洛杉矶分校',
+        degree: '商科交换项目',
+        period: '2023.01 - 2023.06',
+        location: '洛杉矶',
+        highlights: [
+          'Anderson商学院交换生',
+          '跨文化商业案例分析',
+          '国际市场营销项目'
+        ]
+      }
+    }
+  },
+
+  honors: {
+    title: '荣誉奖项',
+    description: '在学术、专业和领导力方面获得的重要认可。',
+    totalCount: '30+',
+    totalLabel: '项荣誉奖项',
+    categories: {
+      national: '国家级荣誉',
+      academic: '学术奖项',
+      professional: '专业认证',
+      leadership: '领导力奖项'
+    },
+    items: {
+      national: [
+        '清华大学苏世民学者（全额奖学金）',
+        '国家励志奖学金',
+        '全国大学生英语竞赛一等奖',
+        '中国大学生计算机设计大赛国家二等奖'
+      ],
+      academic: [
+        '中国人民大学优秀毕业生',
+        '新闻传播学院优秀学生',
+        '专业课程成绩前5%',
+        '英语专业八级证书',
+        '雅思8.0分',
+        '托福110分'
+      ],
+      professional: [
+        'Google Analytics认证',
+        'Facebook Blueprint认证',
+        '产品经理专业认证（NPDP）',
+        '数据分析师认证',
+        'Scrum Master认证'
+      ],
+      leadership: [
+        '学生会主席',
+        '社团联合会副主席',
+        '志愿服务优秀个人',
+        '社会实践先进个人',
+        '创新创业大赛优秀团队负责人'
+      ]
     }
   }
 }
