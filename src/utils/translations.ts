@@ -106,6 +106,7 @@ export interface Translation {
         company: string;
         period: string;
         location: string;
+        logo: string;
         achievements: string[];
       };
       alibaba: {
@@ -113,6 +114,7 @@ export interface Translation {
         company: string;
         period: string;
         location: string;
+        logo: string;
         achievements: string[];
       };
       startup: {
@@ -120,6 +122,15 @@ export interface Translation {
         company: string;
         period: string;
         location: string;
+        logo: string;
+        achievements: string[];
+      };
+      bytedance: {
+        position: string;
+        company: string;
+        period: string;
+        location: string;
+        logo: string;
         achievements: string[];
       };
     };
@@ -328,6 +339,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
           company: 'Lazada (Alibaba International)',
           period: '2022 - Present',
           location: 'Hangzhou, China',
+          logo: 'https://logos-world.net/wp-content/uploads/2020/11/Lazada-Logo.png',
           achievements: [
             'Led development of LazCortex AI Operations Workbench, improving operational efficiency by 40%',
             'Managed cross-functional teams of 15+ engineers and designers',
@@ -340,6 +352,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
           company: 'Alibaba Group',
           period: '2020 - 2022',
           location: 'Hangzhou, China',
+          logo: 'https://logos-world.net/wp-content/uploads/2020/04/Alibaba-Logo.png',
           achievements: [
             'Designed and launched merchant onboarding platform with 95% completion rate',
             'Collaborated with data science teams to build predictive analytics tools',
@@ -352,11 +365,24 @@ export const translations: Record<'en' | 'zh', Translation> = {
           company: 'Tech Startup',
           period: '2019 - 2020',
           location: 'Shanghai, China',
+          logo: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=100&h=100&fit=crop&crop=center',
           achievements: [
             'Built MVP for B2B SaaS platform from concept to launch',
             'Conducted user research and competitive analysis for market positioning',
             'Worked closely with engineering teams using agile methodologies',
             'Achieved product-market fit with 80% user retention rate'
+          ]
+        },
+        bytedance: {
+          position: 'Product Operations Intern',
+          company: 'ByteDance | TikTok Life Services',
+          period: '2023 Aug - Dec',
+          location: 'Beijing, China',
+          logo: 'https://logos-world.net/wp-content/uploads/2021/08/TikTok-Logo.png',
+          achievements: [
+            'Led TikTok city guide content community product strategy, covering 100+ core cities nationwide',
+            'Product optimization: Enhanced city POI landing page information architecture and interaction experience, increasing user engagement rate by 7.5%',
+            'Traffic growth: Optimized feed flow city anchors, location lists, and city cards, achieving DAU of tens of millions for the guide community'
           ]
         }
       }
@@ -414,7 +440,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
     },
     contact: {
       title: "Let's Connect",
-      description: 'Always open to discussing new opportunities, collaborations, and innovative projects. Reach out and let\'s create something extraordinary together.',
+      description: 'Always open to discussing new opportunities, collaborations, and innovative projects. Reach out and let\\'s create something extraordinary together.',
       email: 'Email',
       wechat: 'WeChat',
       linkedin: 'LinkedIn',
