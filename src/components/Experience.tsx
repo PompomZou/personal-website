@@ -13,6 +13,7 @@ const Experience: React.FC = () => {
       position: t.experience.positions.lazada.position,
       period: t.experience.positions.lazada.period,
       location: t.experience.positions.lazada.location,
+      logo: t.experience.positions.lazada.logo,
       achievements: t.experience.positions.lazada.achievements
     },
     {
@@ -21,6 +22,7 @@ const Experience: React.FC = () => {
       position: t.experience.positions.alibaba.position,
       period: t.experience.positions.alibaba.period,
       location: t.experience.positions.alibaba.location,
+      logo: t.experience.positions.alibaba.logo,
       achievements: t.experience.positions.alibaba.achievements
     },
     {
@@ -29,7 +31,17 @@ const Experience: React.FC = () => {
       position: t.experience.positions.startup.position,
       period: t.experience.positions.startup.period,
       location: t.experience.positions.startup.location,
+      logo: t.experience.positions.startup.logo,
       achievements: t.experience.positions.startup.achievements
+    },
+    {
+      id: 4,
+      company: t.experience.positions.bytedance.company,
+      position: t.experience.positions.bytedance.position,
+      period: t.experience.positions.bytedance.period,
+      location: t.experience.positions.bytedance.location,
+      logo: t.experience.positions.bytedance.logo,
+      achievements: t.experience.positions.bytedance.achievements
     }
   ];
 
@@ -58,24 +70,42 @@ const Experience: React.FC = () => {
               {/* Timeline dot */}
               <div className="absolute left-0 top-2 w-6 h-6 bg-gray-900 rounded-full border-4 border-white shadow-lg"></div>
 
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 ml-4 border border-gray-100 dark:border-gray-600">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div className="space-y-1">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {exp.position}
-                    </h3>
-                    <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
-                      {exp.company}
-                    </p>
-                  </div>
-                  <div className="flex flex-col md:items-end space-y-1 mt-2 md:mt-0">
-                    <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {exp.period}
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 ml-4 border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                  <div className="flex items-start space-x-4 flex-1">
+                    {/* Company Logo */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="w-16 h-16 rounded-lg object-contain bg-white p-2 border border-gray-200 shadow-sm"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
+                      />
                     </div>
-                    <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      {exp.location}
+
+                    {/* Position and Company Info */}
+                    <div className="space-y-2 flex-1">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white leading-tight">
+                        {exp.position}
+                      </h3>
+                      <p className="text-lg font-medium text-blue-600 dark:text-blue-400">
+                        {exp.company}
+                      </p>
+
+                      {/* Period and Location */}
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-1 sm:space-y-0 mt-3">
+                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {exp.period}
+                        </div>
+                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          {exp.location}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
