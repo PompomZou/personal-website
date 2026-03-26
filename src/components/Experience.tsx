@@ -18,21 +18,21 @@ const Experience: React.FC = () => {
     },
     {
       id: 2,
-      company: t.experience.positions.startup.company,
-      position: t.experience.positions.startup.position,
-      period: t.experience.positions.startup.period,
-      location: t.experience.positions.startup.location,
-      logo: t.experience.positions.startup.logo,
-      achievements: t.experience.positions.startup.achievements
-    },
-    {
-      id: 3,
       company: t.experience.positions.alibaba.company,
       position: t.experience.positions.alibaba.position,
       period: t.experience.positions.alibaba.period,
       location: t.experience.positions.alibaba.location,
       logo: t.experience.positions.alibaba.logo,
       achievements: t.experience.positions.alibaba.achievements
+    },
+    {
+      id: 3,
+      company: t.experience.positions.startup.company,
+      position: t.experience.positions.startup.position,
+      period: t.experience.positions.startup.period,
+      location: t.experience.positions.startup.location,
+      logo: t.experience.positions.startup.logo,
+      achievements: t.experience.positions.startup.achievements
     },
     {
       id: 4,
@@ -64,13 +64,13 @@ const Experience: React.FC = () => {
             >
               {/* Timeline line */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-3 top-8 w-0.5 h-full bg-purple-200"></div>
+                <div className="absolute left-3 top-8 w-0.5 h-full bg-gray-200"></div>
               )}
               
               {/* Timeline dot */}
-              <div className="absolute left-0 top-2 w-6 h-6 bg-purple-600 rounded-full border-4 border-white shadow-lg"></div>
+              <div className="absolute left-0 top-2 w-6 h-6 bg-gray-900 rounded-full border-4 border-white shadow-lg"></div>
 
-              <div className="bg-white rounded-xl p-6 ml-4 border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-purple-200">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 ml-4 border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                   <div className="flex items-start space-x-4 flex-1">
                     {/* Company Logo */}
@@ -91,7 +91,7 @@ const Experience: React.FC = () => {
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white leading-tight">
                         {exp.position}
                       </h3>
-                      <p className="text-lg font-medium text-purple-600 dark:text-purple-400">
+                      <p className="text-lg font-medium text-blue-600 dark:text-blue-400">
                         {exp.company}
                       </p>
 
