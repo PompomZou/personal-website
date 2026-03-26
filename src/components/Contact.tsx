@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <a
             href="mailto:daisy@example.com"
-            className="group bg-white p-6 rounded-xl border border-gray-200 card-hover text-center space-y-4"
+            className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover text-center space-y-4"
           >
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto group-hover:bg-blue-600 transition-colors duration-300">
               <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
 
           <a
             href="#"
-            className="group bg-white p-6 rounded-xl border border-gray-200 card-hover text-center space-y-4"
+            className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover text-center space-y-4"
           >
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto group-hover:bg-green-600 transition-colors duration-300">
               <MessageCircle className="w-6 h-6 text-green-600 group-hover:text-white transition-colors duration-300" />
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
 
           <a
             href="#"
-            className="group bg-white p-6 rounded-xl border border-gray-200 card-hover text-center space-y-4"
+            className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover text-center space-y-4"
           >
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto group-hover:bg-blue-700 transition-colors duration-300">
               <Linkedin className="w-6 h-6 text-blue-700 group-hover:text-white transition-colors duration-300" />
@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
 
           <a
             href="#"
-            className="group bg-white p-6 rounded-xl border border-gray-200 card-hover text-center space-y-4"
+            className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover text-center space-y-4"
           >
             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto group-hover:bg-gray-900 transition-colors duration-300">
               <Github className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" />

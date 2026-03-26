@@ -48,20 +48,20 @@ const Services: React.FC = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="bg-white p-6 rounded-xl border border-gray-200 card-hover animate-slide-up"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <service.icon className="w-6 h-6 text-gray-700" />
+                    <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+                      <service.icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -80,12 +80,12 @@ const Services: React.FC = () => {
             </p>
           </div>
 
-          <div className="relative overflow-hidden bg-white rounded-xl border border-gray-200 p-6">
+          <div className="relative overflow-hidden bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
             <div className="flex animate-marquee space-x-8">
               {[...techStack, ...techStack].map((tech, index) => (
                 <div
                   key={`${tech}-${index}`}
-                  className="flex-shrink-0 px-4 py-2 bg-gray-100 rounded-lg text-sm font-medium text-gray-700 whitespace-nowrap"
+                  className="flex-shrink-0 px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap"
                 >
                   {tech}
                 </div>
