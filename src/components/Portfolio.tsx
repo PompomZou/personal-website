@@ -3,8 +3,6 @@ import Navigation from './Navigation';
 import Hero from './Hero';
 import About from './About';
 import RecentWork from './RecentWork';
-import Education from './Education';
-import Honors from './Honors';
 import Experience from './Experience';
 import Services from './Services';
 import Testimonials from './Testimonials';
@@ -44,12 +42,6 @@ const Portfolio: React.FC = () => {
         </section>
         <section id="work">
           <RecentWork />
-        </section>
-        <section id="education">
-          <Education />
-        </section>
-        <section id="honors">
-          <Honors />
         </section>
         <section id="experience">
           <Experience />

@@ -4,8 +4,6 @@ export interface Translation {
     home: string;
     about: string;
     work: string;
-    education: string;
-    honors: string;
     experience: string;
     services: string;
     contact: string;
@@ -265,26 +263,6 @@ export interface Translation {
     };
   };
   
-  // Honors Section
-  honors: {
-    title: string;
-    description: string;
-    totalCount: string;
-    totalLabel: string;
-    categories: {
-      national: string;
-      academic: string;
-      professional: string;
-      leadership: string;
-    };
-    items: {
-      national: string[];
-      academic: string[];
-      professional: string[];
-      leadership: string[];
-    };
-  };
-
   // Contact Section
   contact: {
     title: string;
@@ -338,9 +316,8 @@ export const translations: Record<'en' | 'zh', Translation> = {
   nav: {
     home: 'Home',
     about: 'About',
-    work: 'Work',
     education: 'Education',
-    honors: 'Honors',
+    work: 'Work',
     experience: 'Experience',
     services: 'Services',
     contact: 'Contact',
@@ -580,9 +557,8 @@ export const translations: Record<'en' | 'zh', Translation> = {
     nav: {
       home: '首页',
       about: '关于我',
-      work: '项目',
       education: '教育',
-      honors: '荣誉',
+      work: '项目',
       experience: '经历',
       services: '能力',
       contact: '联系',
@@ -1102,46 +1078,23 @@ export const translations: Record<'en' | 'zh', Translation> = {
 
   honors: {
     title: '荣誉与奖项',
-    description: '学术卓越、领导力和专业成就的认可',
-    totalCount: '22+',
-    totalLabel: '奖项与荣誉',
+    description: '学术卓越和专业成就的认可。',
     categories: {
-      national: '国家级奖项',
-      academic: '学术卓越',
-      professional: '专业认可',
-      leadership: '领导力与服务'
-    },
-    items: {
-      national: [
-        '国家奖学金（前1%）',
-        '中国国家创新奖',
-        '北京市优秀毕业生',
-        '全国优秀学生干部'
-      ],
-      academic: [
-        '清华苏世民奖学金（全额奖学金）',
-        '院长荣誉榜 - 连续4学期',
-        '中国人民大学学术优秀奖',
-        '优秀毕业论文奖',
-        'Phi Beta Kappa 荣誉学会',
-        '最高荣誉毕业生'
-      ],
-      professional: [
-        '阿里巴巴优秀实习生奖',
-        '产品创新卓越奖',
-        '跨境电商新星奖',
-        '数字化转型冠军',
-        '用户增长卓越奖',
-        '数据驱动产品奖'
-      ],
-      leadership: [
-        '中国人民大学学生会主席',
-        '国际学生大使',
-        '志愿服务卓越奖',
-        '社区领导力认可',
-        '导师计划优秀导师',
-        '社会影响力倡议领导者'
-      ]
+      national: {
+        title: '国家级奖项',
+        count: '22项',
+        items: ['大广赛全国一等奖', '公关大赛全国二等奖', '创新大赛获奖者']
+      },
+      academic: {
+        title: '学术荣誉',
+        count: '4项',
+        items: ['国家奖学金', '北京市优秀毕业生', '院长荣誉榜', '学术优秀奖']
+      },
+      recognition: {
+        title: '专业认可',
+        count: '6项',
+        items: ['优秀实习生', '团队卓越奖', '创新奖']
+      }
     }
   },
 
