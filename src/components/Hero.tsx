@@ -26,8 +26,12 @@ const Hero: React.FC = () => {
           {/* Avatar */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-600 dark:to-gray-800 flex items-center justify-center text-4xl font-bold text-gray-700 dark:text-gray-300 shadow-lg">
-                ZY
+              <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg ring-4 ring-white dark:ring-gray-800">
+                <img
+                  src="https://oneday-react-native.oss-cn-zhangjiakou.aliyuncs.com/oneday/source/304a5ed0-c610-4657-a527-0ccebf2a4626.jpeg"
+                  alt="Zou Yujia (Daisy)"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
               <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
