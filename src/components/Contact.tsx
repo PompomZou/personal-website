@@ -1,9 +1,27 @@
-import React from 'react';
-import { Mail, MessageCircle, Linkedin, Github, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MessageCircle, Linkedin, Github, ExternalLink, Check } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
+  const [toast, setToast] = useState<{ show: boolean; message: string }>({ show: false, message: '' });
+
+  const showToast = (message: string) => {
+    setToast({ show: true, message });
+    setTimeout(() => {
+      setToast({ show: false, message: '' });
+    }, 2000);
+  };
+
+  const copyToClipboard = async (text: string, type: 'email' | 'wechat') => {
+    try {
+      await navigator.clipboard.writeText(text);
+      const message = type === 'email' ? '邮箱已复制到剪贴板' : '微信号已复制到剪贴板';
+      showToast(message);
+    } catch (err) {
+      console.error('复制失败:', err);
+    }
+  };
 
   return (
     <section className="section-container">
@@ -17,7 +35,7 @@ const Contact: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div
-            onClick={() => navigator.clipboard.writeText('zouyujia16@outlook.com')}
+            onClick={() => copyToClipboard('zouyujia16@outlook.com', 'email')}
             className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover text-center space-y-4 cursor-pointer"
           >
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto group-hover:bg-blue-600 transition-colors duration-300">
@@ -33,7 +51,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div
-            onClick={() => navigator.clipboard.writeText('13212300408')}
+            onClick={() => copyToClipboard('13212300408', 'wechat')}
             className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 card-hover text-center space-y-4 cursor-pointer"
           >
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto group-hover:bg-green-600 transition-colors duration-300">
@@ -88,6 +106,16 @@ const Contact: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {/* Toast Notification */}
+      {toast.show && (
+        <div className="fixed top-4 right-4 z-50 animate-slide-in">
+          <div className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2">
+            <Check className="w-5 h-5" />
+            <span className="font-medium">{toast.message}</span>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
