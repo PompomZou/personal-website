@@ -1264,5 +1264,6 @@ export const translations: Record<'en' | 'zh', Translation> = {
       ]
     }
   }
-}
 };
+
+export default translations;
