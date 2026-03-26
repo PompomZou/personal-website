@@ -604,8 +604,8 @@ export const translations: Record<'en' | 'zh', Translation> = {
         }
       }
     }
-  }
-};
+  },
+  zh: {
     hero: {
       title: '邹雨珈 / Daisy',
       subtitle: '跨境电商产品经理 | 清华苏世民学者',
