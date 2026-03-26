@@ -407,41 +407,41 @@ export const translations: Record<'en' | 'zh', Translation> = {
       description: 'My journey in product management and technology, building impactful solutions for millions of users across Asia-Pacific.',
       positions: {
         lazada: {
-          position: 'Senior Product Manager',
+          position: 'E-commerce Product Manager',
           company: 'Lazada (Alibaba International)',
-          period: '2022 - Present',
+          period: '2025.06 - Present',
           location: 'Hangzhou, China',
           achievements: [
-            'Led development of LazCortex AI Operations Workbench, improving operational efficiency by 40%',
-            'Managed cross-functional teams of 15+ engineers and designers',
-            'Implemented AI-driven seller management systems serving 100K+ merchants',
-            'Drove product strategy for Southeast Asian e-commerce operations'
+            'ToC: Lazmall Channel Growth & User Operations - Product Owner',
+            'User Growth: Built "internal traffic + external precise penetration + rights exchange" growth system, connecting homepage traffic strategy, Push, influencer alliance/external advertising, game exchange, channel exchange and other multi-channel touchpoints, channel daily DAU +37.5%',
+            'Refined Operations: Built "layered user refined undertaking" operation system, coupon redemption GMV increased 8.5 times, accounting for channel GMV from 3% to 15%',
+            'Risk Control & Governance: Proactively promoted risk control strategy launch, cut 1600 orders/day fake traffic, high-quality orders doubled (600→1300 orders/day)',
+            'AI Product Landing: Built Chinese merchant AI operation workbench from 0 to 1, designed cross-country cross-business permission system, supporting 100+ people collaborative project delivery'
           ]
         },
         alibaba: {
           position: 'Product Manager (Intern)',
-          company: 'Alibaba Taotian Group',
+          company: 'Alibaba Taotian Group · Information Flow Product Department',
           period: '2024.05 - 2024.08',
           location: 'Hangzhou, China',
           achievements: [
-            'Optimized Taobao homepage feed recommendation reasons, unified data pipeline and frontend standards',
-            'Drove product iteration through A/B testing, achieving +1.3% exposure PV and +0.7% CTR',
-            'Improved recommendation configuration backend, reducing error rates and enhancing launch efficiency',
-            'Gained experience in large-scale user products and data analysis on billion-DAU platform'
+            'Responsible for Taobao homepage information flow recommendation reason optimization, unified card data pipeline and frontend display standards',
+            'Drove product iteration through A/B testing, homepage card exposure PV +1.3%, CTR +0.7%',
+            'Optimized recommendation reason configuration backend, reduced configuration error rate, improved launch process efficiency',
+            'Accumulated large-scale user product and data analysis experience on billion-DAU platform'
           ]
         },
-      startup: {
-        position: 'Co-founder & Product Lead',
-        company: 'SuperVision VR (Startup)',
-        period: '2023 - 2024',
-        location: 'Beijing, China',
-        achievements: [
-          'Co-founded VR startup focused on immersive educational experiences',
-          'Led product development from concept to MVP launch',
-          'Secured seed funding and established partnerships with educational institutions',
-          'Built cross-functional team and established product development processes'
-        ]
-      }
+        bytedance: {
+          position: 'Product Manager (Intern)',
+          company: 'ByteDance · Douyin Local Life',
+          period: '2023.08 - 2023.12',
+          location: 'Beijing, China',
+          achievements: [
+            'Optimized Douyin city POI landing pages and feed city entrances, built strategy content tag system and quality grading model',
+            'Covered 100+ cities, improved content ecosystem quality and user behavior conversion',
+            'Effective exposure PV +12.9%, optimized user experience through data-driven product decisions'
+          ]
+        }
       }
     },
     services: {
@@ -715,10 +715,11 @@ export const translations: Record<'en' | 'zh', Translation> = {
           period: '2025年6月至今',
           location: '中国杭州',
           achievements: [
-            '独立负责LazMall频道用增与运营，驱动DAU从80万增至110万（+37%），日均GMV突破10万美元',
-            '搭建"分层人群精细化承接"运营体系，券核销GMV增长8.5倍，占频道GMV从3%提升至15%',
-            '主动推动风控策略上线，砍掉1600单/日虚假流量，高质量订单翻倍增长（600→1300单/日）',
-            '从0到1搭建华商AI运营工作台，设计跨国跨业务权限体系，支撑100+人协同项目交付'
+            'ToC：Lazmall频道用增&用户运营 - 产品负责人',
+            '用户增长：构建"站内引流 + 站外精准渗透 + 权益换量互补"的用增体系，打通首页引流策略、Push、达人联盟/站外广告唤端、游戏换量、频道换量等多渠道触达链路，频道日均DAU +37.5%',
+            '精细化运营：搭建"分层人群精细化承接"运营体系，券核销GMV增长8.5倍，占频道GMV从3%提升至15%',
+            '风控治理：主动推动风控策略上线，砍掉1600单/日虚假流量，高质量订单翻倍增长（600→1300单/日）',
+            'AI产品落地：从0到1搭建华商AI运营工作台，设计跨国跨业务权限体系，支撑100+人协同项目交付'
           ]
         },
         alibaba: {
@@ -733,16 +734,15 @@ export const translations: Record<'en' | 'zh', Translation> = {
             '在DAU数亿级平台积累大规模用户产品与数据分析经验'
           ]
         },
-        startup: {
-          position: '联合创始人 & 产品负责人',
-          company: '超悦视界（VR创业公司）',
-          period: '2023年-2024年',
+        bytedance: {
+          position: '产品经理（实习）',
+          company: '字节跳动 · 抖音本地生活',
+          period: '2023年8月-12月',
           location: '中国北京',
           achievements: [
-            '联合创立专注沉浸式教育体验的VR创业公司',
-            '主导产品从概念到MVP的全流程开发',
-            '获得种子轮融资，与教育机构建立合作伙伴关系',
-            '组建跨职能团队，建立产品开发流程和标准'
+            '优化抖音城市POI落地页和feed流城市入口，搭建攻略内容标签体系与质量分级模型',
+            '覆盖100+城市，提升内容生态质量与用户行为转化',
+            '有效曝光PV +12.9%，通过数据驱动的产品决策优化用户体验'
           ]
         }
       }

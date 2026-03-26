@@ -25,13 +25,31 @@ const Experience: React.FC = () => {
     },
     {
       id: 3,
-      company: t.experience.positions.startup.company,
-      position: t.experience.positions.startup.position,
-      period: t.experience.positions.startup.period,
-      location: t.experience.positions.startup.location,
-      achievements: t.experience.positions.startup.achievements
+      company: t.experience.positions.bytedance.company,
+      position: t.experience.positions.bytedance.position,
+      period: t.experience.positions.bytedance.period,
+      location: t.experience.positions.bytedance.location,
+      achievements: t.experience.positions.bytedance.achievements
     }
   ];
+
+  // 提取数字和关键词的函数
+  const highlightKeywords = (text: string) => {
+    // 匹配数字+%、数字+倍、数字+万、数字+单等模式
+    const numberPattern = /(\+?\d+(?:\.\d+)?[%倍万单次]?(?:\/日)?)/g;
+    // 匹配关键业务词汇
+    const keywordPattern = /(DAU|GMV|PV|CTR|AI|ToC|用户增长|精细化运营|风控治理|产品负责人|站内引流|站外精准渗透|权益换量|多渠道触达|分层人群|券核销|虚假流量|高质量订单|跨国跨业务|协同项目|A\/B测试|数据链路|配置后台|POI落地页|内容标签体系|质量分级模型)/g;
+
+    let result = text;
+
+    // 高亮数字
+    result = result.replace(numberPattern, '<span class="text-purple-600 dark:text-purple-400 font-bold bg-purple-50 dark:bg-purple-900/20 px-1 rounded">$1</span>');
+
+    // 高亮关键词
+    result = result.replace(keywordPattern, '<span class="text-purple-600 dark:text-purple-400 font-semibold">$1</span>');
+
+    return result;
+  };
 
   return (
     <section className="section-container bg-white">
@@ -52,11 +70,11 @@ const Experience: React.FC = () => {
             >
               {/* Timeline line */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-3 top-8 w-0.5 h-full bg-gray-200"></div>
+                <div className="absolute left-3 top-8 w-0.5 h-full bg-purple-200 dark:bg-purple-800"></div>
               )}
               
               {/* Timeline dot */}
-              <div className="absolute left-0 top-2 w-6 h-6 bg-gray-900 rounded-full border-4 border-white shadow-lg"></div>
+              <div className="absolute left-0 top-2 w-6 h-6 bg-purple-600 dark:bg-purple-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
 
               <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 ml-4 border border-gray-100 dark:border-gray-600">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -80,11 +98,14 @@ const Experience: React.FC = () => {
                   </div>
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {exp.achievements.map((achievement, idx) => (
                     <li key={idx} className="flex items-start text-gray-600 dark:text-gray-300">
-                      <span className="w-1.5 h-1.5 bg-gray-400 dark:bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-sm leading-relaxed">{achievement}</span>
+                      <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span
+                        className="text-sm leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: highlightKeywords(achievement) }}
+                      />
                     </li>
                   ))}
                 </ul>
