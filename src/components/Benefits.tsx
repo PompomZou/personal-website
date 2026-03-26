@@ -57,8 +57,8 @@ const Benefits: React.FC = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="space-y-4">
-                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-900 transition-colors duration-300">
-                  <benefit.icon className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors duration-300" />
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-600 transition-colors duration-300">
+                  <benefit.icon className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-lg font-semibold text-gray-900">

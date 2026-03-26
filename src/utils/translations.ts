@@ -96,6 +96,78 @@ export interface Translation {
     };
   };
   
+  // Education Section
+  education: {
+    title: string;
+    description: string;
+    positions: {
+      tsinghua: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string[];
+      };
+      ruc: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string[];
+      };
+      ucla: {
+        school: string;
+        degree: string;
+        period: string;
+        location: string;
+        highlights: string[];
+      };
+    };
+  };
+
+  // Honors Section
+  honors: {
+    title: string;
+    description: string;
+    categories: {
+      national: {
+        title: string;
+        count: string;
+        items: string[];
+      };
+      academic: {
+        title: string;
+        count: string;
+        items: string[];
+      };
+      recognition: {
+        title: string;
+        count: string;
+        items: string[];
+      };
+    };
+  };
+
+  // Product Philosophy Section
+  philosophy: {
+    title: string;
+    description: string;
+    items: {
+      dataFirst: {
+        title: string;
+        description: string;
+      };
+      userCentric: {
+        title: string;
+        description: string;
+      };
+      crossFunctional: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+
   // Experience Section
   experience: {
     title: string;
@@ -109,7 +181,7 @@ export interface Translation {
         logo: string;
         achievements: string[];
       };
-      alibaba: {
+      startup: {
         position: string;
         company: string;
         period: string;
@@ -117,7 +189,7 @@ export interface Translation {
         logo: string;
         achievements: string[];
       };
-      startup: {
+      alibaba: {
         position: string;
         company: string;
         period: string;
@@ -241,15 +313,16 @@ export interface Translation {
 
 export const translations: Record<'en' | 'zh', Translation> = {
   en: {
-    nav: {
-      home: 'Home',
-      about: 'About',
-      work: 'Work',
-      experience: 'Experience',
-      services: 'Services',
-      contact: 'Contact',
-      resume: 'Resume'
-    },
+  nav: {
+    home: 'Home',
+    about: 'About',
+    education: 'Education',
+    work: 'Work',
+    experience: 'Experience',
+    services: 'Services',
+    contact: 'Contact',
+    resume: 'Resume'
+  },
     hero: {
       title: 'Zou Yujia / Daisy',
       subtitle: 'AI-Powered Product Manager & Creative Technologist',
@@ -297,36 +370,36 @@ export const translations: Record<'en' | 'zh', Translation> = {
       viewAll: 'View All Projects',
       projects: {
         lazcortex: {
-          title: 'LazCortex AI Operations',
-          industry: 'E-commerce',
-          description: 'AI-powered operations workbench for Lazada, streamlining seller management and automated decision-making processes.',
-          users: '100K+ merchants',
-          impact: '40% efficiency gain',
-          timeline: '18 months'
+          title: 'Lazada LazMall Channel Growth & Operations',
+          industry: 'Cross-border E-commerce',
+          description: 'Led growth and operations system for LazMall brand channel across 6 Southeast Asian countries, building multi-channel user acquisition and layered audience engagement systems.',
+          users: '1.1M+ DAU',
+          impact: 'DAU +37% | GMV $100K+/day',
+          timeline: '2025-Present'
         },
         creative: {
-          title: 'Creative Coding Portfolio',
-          industry: 'Creative Tech',
-          description: 'Interactive WebGL experiences using Three.js, showcasing the intersection of technology and art.',
-          users: '10K+ visitors',
-          impact: '95% engagement',
-          timeline: '6 months'
+          title: 'AI Operations Workbench & Store Decoration Agent',
+          industry: 'AI Product',
+          description: 'Built AI operations workbench from 0-1, defining multi-business module integration SOPs and implementing core AI capabilities in one-stop platform.',
+          users: '100+ collaborative users',
+          impact: 'Multi-BU cross-6-country coordination',
+          timeline: '2025-Present'
         },
         optimization: {
-          title: 'E-commerce Optimization Suite',
-          industry: 'Retail',
-          description: 'Comprehensive analytics and optimization tools for improving conversion rates and user experience.',
-          users: '50K+ sellers',
-          impact: '25% conversion boost',
-          timeline: '12 months'
+          title: 'Taobao Homepage Feed Recommendation Optimization',
+          industry: 'E-commerce',
+          description: 'Unified data pipeline and frontend display standards for Taobao homepage feed cards, optimized recommendation reason configuration through A/B testing.',
+          users: 'Hundreds of millions DAU platform',
+          impact: 'Exposure PV +1.3% | CTR +0.7%',
+          timeline: '2024'
         },
         framework: {
-          title: 'AI Agent Framework',
-          industry: 'Technology',
-          description: 'Modular framework for building and deploying AI agents across various business applications.',
-          users: '15+ teams',
-          impact: '60% dev time saved',
-          timeline: '9 months'
+          title: 'TikTok City POI Landing Page Experience Optimization',
+          industry: 'Local Life Services',
+          description: 'Optimized TikTok city POI landing pages and feed city entries, built content tagging system and quality grading model covering 100+ cities.',
+          users: 'Covering 100+ cities',
+          impact: 'Effective exposure PV +12.9%',
+          timeline: '2023'
         }
       }
     },
@@ -335,42 +408,40 @@ export const translations: Record<'en' | 'zh', Translation> = {
       description: 'My journey in product management and technology, building impactful solutions for millions of users across Asia-Pacific.',
       positions: {
         lazada: {
-          position: 'Senior Product Manager',
+          position: 'E-commerce Product Manager',
           company: 'Lazada (Alibaba International)',
-          period: '2022 - Present',
+          period: 'June 2025 - Present',
           location: 'Hangzhou, China',
           logo: 'https://logos-world.net/wp-content/uploads/2020/11/Lazada-Logo.png',
           achievements: [
-            'Led development of LazCortex AI Operations Workbench, improving operational efficiency by 40%',
-            'Managed cross-functional teams of 15+ engineers and designers',
-            'Implemented AI-driven seller management systems serving 100K+ merchants',
-            'Drove product strategy for Southeast Asian e-commerce operations'
-          ]
-        },
-        alibaba: {
-          position: 'Product Manager',
-          company: 'Alibaba Group',
-          period: '2020 - 2022',
-          location: 'Hangzhou, China',
-          logo: 'https://logos-world.net/wp-content/uploads/2020/04/Alibaba-Logo.png',
-          achievements: [
-            'Designed and launched merchant onboarding platform with 95% completion rate',
-            'Collaborated with data science teams to build predictive analytics tools',
-            'Optimized user experience flows resulting in 25% increase in conversion',
-            'Mentored junior product managers and established PM best practices'
+            'ToC: LazMall Channel Growth & User Operations - Product Lead',
+            'User Growth: Built "internal traffic + external precision penetration + rights exchange" growth system, connecting homepage traffic strategy, Push, influencer alliance/external advertising, game exchange, channel exchange and other multi-channel touchpoints, channel daily DAU +37.5%',
+            'User Operations: Built "universal rights empowerment + layered audience refined engagement" operations system, achieving channel buyer conversion rate +50%, daily GMV increased 10x, coupon redemption GMV ratio from 3%→15%',
+            'ToB: AI Operations Workbench - Infrastructure Lead, Agent Product Lead'
           ]
         },
         startup: {
-          position: 'Associate Product Manager',
-          company: 'Tech Startup',
-          period: '2019 - 2020',
-          location: 'Shanghai, China',
+          position: 'Product Manager (Intern)',
+          company: 'FunFitLand (North American VR Fitness Startup)',
+          period: 'November 2024 - February 2025',
+          location: 'Beijing, China',
           logo: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=100&h=100&fit=crop&crop=center',
           achievements: [
-            'Built MVP for B2B SaaS platform from concept to launch',
-            'Conducted user research and competitive analysis for market positioning',
-            'Worked closely with engineering teams using agile methodologies',
-            'Achieved product-market fit with 80% user retention rate'
+            'Third product lead, responsible for user-side product design of VR fitness app FunFitLand on Meta Quest platform, reporting directly to founder',
+            'Independently completed search/filter/favorite, workout records and other core functions from 0-1 launch',
+            'User scale grew from 10K+ to 50K+, paid user scale doubled through user funnel analysis and promotion tools'
+          ]
+        },
+        alibaba: {
+          position: 'Product Manager (Intern)',
+          company: 'Alibaba Taobao & Tmall Group · Information Flow Product',
+          period: 'May - August 2024',
+          location: 'Hangzhou, China',
+          logo: 'https://logos-world.net/wp-content/uploads/2020/04/Alibaba-Logo.png',
+          achievements: [
+            'Independently responsible for product design and optimization of Taobao homepage information flow recommendation reason module',
+            'Improved frontend expression: Led recommendation reason display standardization and data pipeline governance, homepage card exposure PV +1.3%, CTR +0.7%',
+            'Optimized backend infrastructure: Reconstructed recommendation reason configuration backend, simplified operation configuration process'
           ]
         },
         bytedance: {
@@ -390,24 +461,24 @@ export const translations: Record<'en' | 'zh', Translation> = {
     services: {
       title: 'What I Do',
       description: 'Combining product management expertise with creative technology to build innovative solutions that drive business impact.',
-      techStack: 'Tech Stack',
-      techStackDesc: 'Tools and technologies I use to bring ideas to life.',
+      techStack: 'Skills & Tools',
+      techStackDesc: 'Core tools used in daily product and data work.',
       items: {
         aiOperations: {
-          title: 'AI Operations',
-          description: 'Design and implement AI-powered operational systems that scale business processes and improve efficiency.'
+          title: 'AI Product Planning',
+          description: 'Design AI product architecture from 0-1, define business integration SOPs, drive AI capability implementation and scale in operational scenarios.'
         },
         productGrowth: {
-          title: 'Product Growth',
-          description: 'Data-driven product strategies that optimize user experience and drive sustainable business growth.'
+          title: 'User Growth & Operations',
+          description: 'Build data-driven user growth systems covering acquisition, retention, and activation full-funnel for sustainable business growth.'
         },
         creativeCoding: {
-          title: 'Creative Coding',
-          description: 'Interactive experiences using Three.js, WebGL, and modern web technologies for engaging user interfaces.'
+          title: 'Data Analysis & Insights',
+          description: 'Proficient in SQL, Python for data analysis, drive product decisions through data attribution and A/B testing.'
         },
         processOptimization: {
-          title: 'Process Optimization',
-          description: 'Streamline workflows and automate repetitive tasks to maximize team productivity and output quality.'
+          title: 'Cross-country Collaboration',
+          description: 'Experience in product delivery across 6 countries with 100+ people coordination, skilled in defining SOPs and permission systems.'
         }
       }
     },
@@ -486,6 +557,7 @@ export const translations: Record<'en' | 'zh', Translation> = {
     nav: {
       home: '首页',
       about: '关于我',
+      education: '教育',
       work: '项目',
       experience: '经历',
       services: '能力',
@@ -722,5 +794,327 @@ export const translations: Record<'en' | 'zh', Translation> = {
         }
       }
     }
+  },
+  zh: {
+  nav: {
+    home: '首页',
+    about: '关于我',
+    education: '教育',
+    work: '项目',
+    experience: '经历',
+    services: '能力',
+    contact: '联系',
+    resume: '简历'
+  },
+  hero: {
+    title: '邹雨珈 / Daisy',
+    subtitle: '跨境电商产品经理 | 清华苏世民学者',
+    description: '专注跨境电商用户增长与AI产品落地，驱动东南亚6国业务增长',
+    location: '中国杭州',
+    company: 'Lazada（阿里巴巴国际）',
+    availability: '开放新机会',
+    yearsExperience: '2+',
+    usersImpacted: '110万+',
+    efficiencyBoost: '37%',
+    experienceDesc: '产品与运营经验',
+    usersDesc: '频道日活用户（东南亚6国）',
+    efficiencyDesc: '频道DAU增长幅度',
+    viewWork: '查看项目',
+    getInTouch: '联系我'
+  },
+  about: {
+    title: '用数据驱动增长，用AI重塑运营',
+    description: 'Lazada（阿里巴巴国际）电商产品经理，独立负责覆盖东南亚6国的LazMall频道增长与运营体系。清华苏世民学者，人大国际新闻与英语双学位。',
+    whatSetsApart: '我的核心优势',
+    aiMindset: 'AI产品落地能力：',
+    aiMindsetDesc: '从0到1搭建华商AI运营工作台，主导店铺装修Agent产品规划',
+    creativeTech: '数据驱动决策：',
+    creativeTechDesc: '擅长数据归因与A/B测试，每个产品决策都有数据支撑',
+    crossCultural: '跨国协同经验：',
+    crossCulturalDesc: '主导跨6国、100+人协同的产品落地，英语流利（雅思8.0）',
+    dataDriver: '全链路产品思维：',
+    dataDriverDesc: '兼具用户增长、精细化运营、商业化与风控治理的复合经验',
+    collaborate: '开始交流',
+    highlights: {
+      experience: '年产品经验',
+      experienceDesc: '涵盖增长、运营与AI产品',
+      users: '日活用户',
+      usersDesc: '覆盖东南亚6国',
+      efficiency: 'DAU增长',
+      efficiencyDesc: '频道用户增长幅度',
+      conversion: '券核销GMV增长',
+      conversionDesc: '精细化运营成果'
+    }
+  },
+  work: {
+    title: '核心项目',
+    description: '在Lazada、阿里巴巴淘天、字节跳动抖音等公司主导的产品项目，覆盖用户增长、AI产品、推荐优化等领域。',
+    featured: '重点项目',
+    viewAll: '查看所有项目',
+    projects: {
+      lazcortex: {
+        title: 'Lazada LazMall 频道增长与运营体系',
+        industry: '跨境电商',
+        description: '独立负责覆盖东南亚6国的品牌频道增长与精细化运营体系建设，构建多渠道用户触达和分层人群承接体系，推动频道从规模扩张转向健康经营。',
+        users: '110万+日活',
+        impact: 'DAU +37% | 日均GMV 10万+$',
+        timeline: '2025至今'
+      },
+      creative: {
+        title: '华商AI运营工作台 & 店铺装修Agent',
+        industry: 'AI产品',
+        description: '从0到1搭建华商AI运营工作台，定义多业务模块接入SOP，实现核心AI能力一站式收口；设计\"BU×国家×权限等级\"叉乘体系，支撑跨国协同。',
+        users: '100+协同用户',
+        impact: '多BU跨6国协同',
+        timeline: '2025至今'
+      },
+      optimization: {
+        title: '淘宝首页信息流推荐理由优化',
+        industry: '电商',
+        description: '统一淘宝首页信息流卡片的数据链路和前端展示标准，通过A/B测试优化推荐理由配置逻辑，提升数亿DAU级平台的用户浏览体验。',
+        users: 'DAU数亿级平台',
+        impact: '曝光PV +1.3% | CTR +0.7%',
+        timeline: '2024'
+      },
+      framework: {
+        title: '抖音城市POI落地页体验优化',
+        industry: '本地生活',
+        description: '优化抖音城市POI落地页和feed流城市入口，搭建攻略内容标签体系与质量分级模型，覆盖100+城市，提升内容生态质量与用户行为转化。',
+        users: '覆盖100+城市',
+        impact: '有效曝光PV +12.9%',
+        timeline: '2023'
+      }
+    }
+  },
+  experience: {
+    title: '工作经历',
+    description: '从字节跳动到阿里巴巴再到Lazada，在头部互联网公司积累产品管理与增长运营经验。',
+    positions: {
+      lazada: {
+        position: '电商产品经理',
+        company: 'Lazada（阿里巴巴国际）',
+        period: '2025年6月至今',
+        location: '中国杭州',
+        logo: 'https://logos-world.net/wp-content/uploads/2020/11/Lazada-Logo.png',
+        achievements: [
+          'ToC：Lazmall频道用增&用户运营 - 产品负责人',
+          '用户增长：构建\"站内引流 + 站外精准渗透 + 权益换量互补\"的用增体系，打通首页引流策略、Push、达人联盟/站外广告唤端、游戏换量、频道换量等多渠道触达链路，频道日均DAU +37.5%；优化召回路径，7日留存提升10pt（55%→65%），为频道沉淀了高质量的品牌心智用户。',
+          '用户运营：针对频道运营工具单一、流量承接粗放的痛点，构建了\"通用权益赋能+分层人群精细化承接\"的运营体系。通过权益转化提效、任务体系优化、人群承接优化等产品功能和策略，实现频道买家转化率+50%，日均GMV翻十倍，券核销GMV占比由3%→15%，任务引导order占比由11%→17%（+6pt），日均贡献华商货盘订单>1500单，实现了频道经营质量与规模增长的双重提升。',
+          '网赚与商业化：主导频道网赚体系的风控治理与商业化提效。风控侧，通过黑产过滤和任务策略，节省频道预算3000$/day，提升ROI并带来增量订单+2000；商业化侧，通过接入搜索广告任务，实现网赚支出与搜索广告商业化收入的收支平衡；用户侧，搭建签到\"动态奖励×人群跃迁\"机制，根据用户活跃度适配奖励额度，签到人数+9%，频道次留+7pt、七留+5pt。',
+          'ToB：华商AI运营工作台 - 基础架构负责人、Agent产品负责人',
+          'AI运营工作台：从 0到1搭建华商 AI 运营工作台，设计标准化多级菜单体系与\"BU×国家×权限等级\"叉乘权限管理系统，实现覆盖东南亚 6国× 6条业务线的精细化权限管控与多业务模块一站式收口，支撑100+人跨国协同；',
+          '店铺装修Agent：主导店铺精装修Agent产品方案设计与落地，构建\"扒图 →选图→修图→上传\"全流程 AI自动化链路，配套审核平台与监控看板，单店装修时长从30分钟压缩至5分钟，日均产能从15个提升至150个。'
+        ]
+      },
+      startup: {
+        position: '产品经理（实习）',
+        company: '超悦视界（北美VR健身初创公司）',
+        period: '2024年11月-2025年2月',
+        location: '中国北京',
+        logo: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=100&h=100&fit=crop&crop=center',
+        achievements: [
+          '公司产品三号位，负责Meta Quest平台VR健身应用FunFitLand的用户侧产品设计，直接向创始人汇报，跨中美团队协作，全英文工作环境。',
+          '独立完成搜索/筛选/收藏、锻炼记录等核心功能从0到1上线；协同��发优化网站SEO与交互结构；通过用户漏斗分析推进Guest Pass、Promo Code等裂变工具上线，用户规模从1w+增长至5w+，付费用户规模翻倍。'
+        ]
+      },
+      alibaba: {
+        position: '产品经理（实习）',
+        company: '阿里巴巴淘天集团 · 信息流产品部',
+        period: '2024年5月-8月',
+        location: '中国杭州',
+        logo: 'https://logos-world.net/wp-content/uploads/2020/04/Alibaba-Logo.png',
+        achievements: [
+          '独立负责淘宝首页信息流推荐理由模块的产品设计与优化，实习成果被团队长期沿用。',
+          '完善前台表达：针对首页卡片推荐理由展示规范不统一、无效理由占比高的问题，主导推荐理由展示标准化与数据链路治理；通过收敛低效推荐理由、缩窄卡片高度提升屏效，优化文案、颜色与优先级排序，首页卡片曝光 PV+1.3%，CTR+0.7%；',
+          '优化后台基建：重构推荐理由配置后台，简化运营配置流程并降低失误率，为后续推荐理由的规模化迭代搭建了可复用的产品基础设施。'
+        ]
+      },
+      bytedance: {
+        position: '产品运营（实习）',
+        company: '字节跳动 | 抖音生活服务部 内容社区',
+        period: '2023年8月-12月',
+        location: '中国北京',
+        logo: 'https://logos-world.net/wp-content/uploads/2021/08/TikTok-Logo.png',
+        achievements: [
+          '负责抖音城市攻略内容社区的产品策略，主导城市POI落地页优化及攻略内容体系从0到1搭建，覆盖全国 100+核心城市。',
+          '攻略社区优化和推广：产品侧，优化城市 POI 落地页信息架构与交互体验，用户有行为率+7.5%，停留时长与复访率显著提升；流量侧，优化feed流城市锚点、地点清单、城市卡等新功能上线，攻略社区DAU达到千万级。'
+        ]
+      }
+    }
+  },
+  services: {
+    title: '专业能力',
+    description: '结合产品管理、数据分析与AI产品经验，构建驱动业务增长的产品解决方案。',
+    techStack: '工具与技能',
+    techStackDesc: '日常产品与数据工作中使用的核心工具。',
+    items: {
+      aiOperations: {
+        title: 'AI产品规划',
+        description: '从0到1规划AI产品架构，定义业务接入SOP，推动AI能力在运营场景的落地与规模化应用。'
+      },
+      productGrowth: {
+        title: '用户增长与运营',
+        description: '构建数据驱动的用户增长体系，涵盖拉新、留存、促活全链路，实现可持续的业务增长。'
+      },
+      creativeCoding: {
+        title: '数据分析与洞察',
+        description: '熟练使用SQL、Python进行数据分析，通过数据归因和A/B测试驱动产品决策，确保每个迭代有据可依。'
+      },
+      processOptimization: {
+        title: '跨国协同管理',
+        description: '具备跨6国、100+人协同的产品落地经验，擅长定义SOP和权限体系，推动复杂项目高效交付。'
+      }
+    }
+  },
+  testimonials: {
+    title: '合作评价',
+    description: '来自不同项目中合作伙伴的反馈与评价。',
+    readyTitle: '有兴趣交流？',
+    readyDesc: '欢迎探讨产品增长、AI产品落地或跨境电商领域的话题与机会。',
+    startConversation: '开始对话',
+    items: {
+      sarah: {
+        name: '陈昕',
+        role: '技术负责人',
+        company: 'Lazada',
+        content: 'Daisy在推动AI工作台项目时展现了出色的跨团队协调能力，能把复杂的业务需求拆解成清晰的产品方案并高效推进落地。'
+      },
+      michael: {
+        name: '张维',
+        role: '运营负责人',
+        company: 'Lazada',
+        content: 'Daisy对数据的敏感度很高，频道增长的每一步策略都有数据支撑。她主动推动的风控治理让我们从虚假繁荣转向了健康增长。'
+      },
+      lisa: {
+        name: '王琳',
+        role: '产品导师',
+        company: '阿里巴巴淘天',
+        content: 'Daisy作为实习生就展现了超出预期的主动性和产品判断力，能独立推进项目从数据分析到方案落地的全流程。'
+      }
+    }
+  },
+  contact: {
+    title: '联系我',
+    description: '欢迎交流产品管理、用户增长、AI产品或跨境电商相关话题。期待与你建立连接。',
+    email: '邮箱',
+    wechat: '微信',
+    linkedin: '领英',
+    github: 'GitHub',
+    footer: '© 2026 邹雨珈 (Daisy)。清华苏世民学者 | 跨境电商产品经理。'
+  },
+  benefits: {
+    title: '为什么选择与我合作',
+    description: '我在每个项目中带来的核心价值。',
+    readyTitle: '期待合作？',
+    readyDesc: '欢迎探讨如何用数据驱动增长、用AI重塑运营，一起打造有影响力的产品。',
+    startProject: '开始交流',
+    scheduleCall: '预约沟通',
+    items: {
+      conversion: {
+        title: '数据驱动',
+        description: '每个产品决策都基于数据归因和A/B测试验证，追求可量化的业务成果。'
+      },
+      aiDriven: {
+        title: 'AI产品落地',
+        description: '具备从0到1的AI产品搭建经验，能将AI能力转化为实际业务价值。'
+      },
+      crossFunctional: {
+        title: '跨国协同',
+        description: '主导过跨6国、100+人协同的产品项目，擅长跨文化团队沟通与推进。'
+      },
+      rapidExecution: {
+        title: '全链路思维',
+        description: '兼具用户增长、精细化运营、商业化与风控治理经验，能从全局视角规划产品。'
+      },
+      riskMitigation: {
+        title: '风控与数据治理',
+        description: '重视数据真实性与业务健康度，有实际推动风控策略落地、清理虚假流量的经验。'
+      },
+      scalable: {
+        title: '快速学习',
+        description: '清华苏世民学者，从新闻到产品跨界转型，具备快速进入新领域并产出成果的能力。'
+      }
+    }
+  },
+
+  education: {
+    title: '教育背景',
+    description: '在中美顶尖院校的管理学、新闻学和商科学习经历。',
+    positions: {
+      tsinghua: {
+        school: '清华大学苏世民书院',
+        degree: '管理学硕士',
+        period: '2024年8月 - 2025年6月',
+        location: '北京',
+        highlights: [
+          '全额奖学金（录取率3%，140/4000+申请者）',
+          '苏世民学者项目',
+          '专注全球事务与公共政策'
+        ]
+      },
+      ruc: {
+        school: '中国人民大学',
+        degree: '国际新闻 & 英语双学位',
+        period: '2020年9月 - 2024年6月',
+        location: '北京',
+        highlights: [
+          'GPA 3.83/4.0，专业排名 1/15，院总排名 9/161（前6%）',
+          '北京市优秀毕业生',
+          '国家奖学金'
+        ]
+      },
+      ucla: {
+        school: 'UCLA',
+        degree: '交换学期：商业管理与市场营销',
+        period: '2024年冬季学期',
+        location: '洛杉矶，美国',
+        highlights: [
+          'GPA 4.0/4.0',
+          '商业管理与市场营销专业'
+        ]
+      }
+    }
+  },
+
+  honors: {
+    title: '荣誉与奖项',
+    description: '学术卓越和专业成就的认可。',
+    categories: {
+      national: {
+        title: '国家级奖项',
+        count: '22项',
+        items: ['大广赛全国一等奖', '公关大赛全国二等奖', '创新大赛获奖者']
+      },
+      academic: {
+        title: '学术荣誉',
+        count: '4项',
+        items: ['国家奖学金', '北京市优秀毕业生', '院长荣誉榜', '学术优秀奖']
+      },
+      recognition: {
+        title: '专业认可',
+        count: '6项',
+        items: ['优秀实习生', '团队卓越奖', '创新奖']
+      }
+    }
+  },
+
+  philosophy: {
+    title: '我的产品理念',
+    description: '指导我产品管理方法和决策制定的核心原则。',
+    items: {
+      dataFirst: {
+        title: '数据驱动决策',
+        description: '每个产品决策都基于数据归因和A/B测试验证，追求可量化的业务成果。'
+      },
+      userCentric: {
+        title: '用户中心设计',
+        description: '深度用户研究和同理心驱动产品策略和功能优先级制定。'
+      },
+      crossFunctional: {
+        title: '跨职能协作',
+        description: '通过清晰沟通让不同团队和利益相关者朝着共同目标努力。'
+      }
+    }
   }
+}
 };
