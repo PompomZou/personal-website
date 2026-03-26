@@ -460,225 +460,225 @@ export const translations: Record<'en' | 'zh', Translation> = {
     nav: {
       home: '首页',
       about: '关于我',
-      work: '作品',
+      work: '项目',
       experience: '经历',
-      services: '服务',
+      services: '能力',
       contact: '联系',
       resume: '简历'
     },
     hero: {
-      title: '邹雨佳 / Daisy',
-      subtitle: 'AI驱动的产品经理 & 创意技术专家',
-      description: '通过智能自动化和以用户为中心的设计，变革电商运营',
+      title: '邹雨珈 / Daisy',
+      subtitle: '跨境电商产品经理 | 清华苏世民学者',
+      description: '专注跨境电商用户增长与AI产品落地，驱动东南亚6国业务增长',
       location: '中国杭州',
       company: 'Lazada（阿里巴巴国际）',
-      availability: '可接项目',
-      yearsExperience: '5+',
-      usersImpacted: '10万+',
-      efficiencyBoost: '40%',
-      experienceDesc: '产品与AI运营经验',
-      usersDesc: '覆盖东南亚地区',
-      efficiencyDesc: '通过AI实施提升',
-      viewWork: '查看作品',
+      availability: '开放新机会',
+      yearsExperience: '2+',
+      usersImpacted: '110万+',
+      efficiencyBoost: '37%',
+      experienceDesc: '产品与运营经验',
+      usersDesc: '频道日活用户（东南亚6国）',
+      efficiencyDesc: '频道DAU增长幅度',
+      viewWork: '查看项目',
       getInTouch: '联系我'
     },
     about: {
-      title: '连接AI创新与商业价值',
-      description: '我是Lazada（阿里巴巴国际）的产品经理，专注于将复杂的商业挑战转化为优雅的AI驱动解决方案。我独特的技术创造力与战略思维相结合，在电商运营中推动可衡量的成果。',
-      whatSetsApart: '我的独特优势',
-      aiMindset: 'AI优先思维：',
-      aiMindsetDesc: '主导开发LazCortex AI运营工作台，服务10万+商家',
-      creativeTech: '创意技术专家：',
-      creativeTechDesc: '探索Three.js和WebGL，创造沉浸式用户体验',
-      crossCultural: '跨文化领导者：',
-      crossCulturalDesc: '管理中国和东南亚市场的多元化团队',
-      dataDriver: '数据驱动决策者：',
-      dataDriverDesc: '每个产品决策都基于用户研究和数据分析',
-      collaborate: '开始合作',
+      title: '用数据驱动增长，用AI重塑运营',
+      description: '我是Lazada（阿里巴巴国际）的电商产品经理，独立负责覆盖东南亚6国的LazMall品牌频道增长与运营体系建设。清华苏世民学者（全额奖学金，录取率3%），中国人民大学国际新闻与英语双学位。此前在字节跳动抖音、阿里巴巴淘天担任产品经理，具备"C端增长运营 + B端AI产品 + 跨国协同"的复合能力。',
+      whatSetsApart: '我的核心优势',
+      aiMindset: 'AI产品落地能力：',
+      aiMindsetDesc: '从0到1搭建华商AI运营工作台，主导店铺装修Agent产品规划',
+      creativeTech: '数据驱动决策：',
+      creativeTechDesc: '擅长数据归因与A/B测试，每个产品决策都有数据支撑',
+      crossCultural: '跨国协同经验：',
+      crossCulturalDesc: '主导跨6国、100+人协同的产品落地，英语流利（雅思8.0）',
+      dataDriver: '全链路产品思维：',
+      dataDriverDesc: '兼具用户增长、精细化运营、商业化与风控治理的复合经验',
+      collaborate: '开始交流',
       highlights: {
-        experience: '年工作经验',
-        experienceDesc: '产品管理与AI运营',
-        users: '用户影响',
-        usersDesc: '覆盖东南亚地区',
-        efficiency: '效率提升',
-        efficiencyDesc: '通过AI实施',
-        conversion: '转化提升',
-        conversionDesc: 'UX优化成果'
+        experience: '年产品经验',
+        experienceDesc: '涵盖增长、运营与AI产品',
+        users: '日活用户',
+        usersDesc: '覆盖东南亚6国',
+        efficiency: 'DAU增长',
+        efficiencyDesc: '频道用户增长幅度',
+        conversion: '券核销GMV增长',
+        conversionDesc: '精细化运营成果'
       }
     },
     work: {
-      title: '精选作品',
-      description: '展示我在AI运营、产品策略和创意技术解决方案方面专业能力的影响力项目精选。',
-      featured: '精选',
+      title: '核心项目',
+      description: '在Lazada、阿里巴巴淘天、字节跳动抖音等公司主导的产品项目，覆盖用户增长、AI产品、推荐优化等领域。',
+      featured: '重点项目',
       viewAll: '查看所有项目',
       projects: {
         lazcortex: {
-          title: 'LazCortex AI运营平台',
-          industry: '电子商务',
-          description: 'Lazada的AI驱动运营工作台，简化商家管理和自动化决策流程。',
-          users: '10万+商家',
-          impact: '40%效率提升',
-          timeline: '18个月'
+          title: 'Lazada LazMall 频道增长与运营体系',
+          industry: '跨境电商',
+          description: '独立负责覆盖东南亚6国的品牌频道增长与精细化运营体系建设，构建多渠道用户触达和分层人群承接体系，推动频道从规模扩张转向健康经营。',
+          users: '110万+日活',
+          impact: 'DAU +37%，日均GMV 10万+$',
+          timeline: '2025至今'
         },
         creative: {
-          title: '创意编程作品集',
-          industry: '创意科技',
-          description: '使用Three.js的交互式WebGL体验，展示技术与艺术的交融。',
-          users: '1万+访客',
-          impact: '95%参与度',
-          timeline: '6个月'
+          title: '华商AI运营工作台 & 店铺装修Agent',
+          industry: 'AI产品',
+          description: '从0到1搭建华商AI运营工作台，定义多业务模块接入SOP，实现核心AI能力一站式收口；设计"BU×国家×权限等级"叉乘体系，支撑跨国协同。',
+          users: '100+协同用户',
+          impact: '多BU跨6国协同',
+          timeline: '2025至今'
         },
         optimization: {
-          title: '电商优化套件',
-          industry: '零售',
-          description: '全面的分析和优化工具，提升转化率和用户体验。',
-          users: '5万+卖家',
-          impact: '25%转化提升',
-          timeline: '12个月'
+          title: '淘宝首页信息流推荐理由优化',
+          industry: '电商',
+          description: '统一淘宝首页信息流卡片的数据链路和前端展示标准，通过A/B测试优化推荐理由配置逻辑，提升数亿DAU级平台的用户浏览体验。',
+          users: 'DAU数亿级平台',
+          impact: '曝光PV +1.3%，CTR +0.7%',
+          timeline: '2024'
         },
         framework: {
-          title: 'AI智能体框架',
-          industry: '技术',
-          description: '用于构建和部署AI智能体的模块化框架，适用于各种商业应用。',
-          users: '15+团队',
-          impact: '60%开发时间节省',
-          timeline: '9个月'
+          title: '抖音城市POI落地页体验优化',
+          industry: '本地生活',
+          description: '优化抖音城市POI落地页和feed流城市入口，搭建攻略内容标签体系与质量分级模型，覆盖100+城市，提升内容生态质量与用户行为转化。',
+          users: '覆盖100+城市',
+          impact: '有效曝光PV +12.9%',
+          timeline: '2023'
         }
       }
     },
     experience: {
       title: '工作经历',
-      description: '我在产品管理和技术领域的历程，为亚太地区数百万用户构建有影响力的解决方案。',
+      description: '从字节跳动到阿里巴巴再到Lazada，在头部互联网公司积累产品管理与增长运营经验。',
       positions: {
         lazada: {
-          position: '高级产品经理',
+          position: '电商产品经理',
           company: 'Lazada（阿里巴巴国际）',
-          period: '2022年至今',
+          period: '2025年6月至今',
           location: '中国杭州',
           achievements: [
-            '主导开发LazCortex AI运营工作台，运营效率提升40%',
-            '管理15+工程师和设计师的跨职能团队',
-            '实施AI驱动的商家管理系统，服务10万+商家',
-            '推动东南亚电商运营的产品策略'
+            '独立负责LazMall频道用增与运营，驱动DAU从80万增至110万（+37%），日均GMV突破10万美元',
+            '搭建"分层人群精细化承接"运营体系，券核销GMV增长8.5倍，占频道GMV从3%提升至15%',
+            '主动推动风控策略上线，砍掉1600单/日虚假流量，高质量订单翻倍增长（600→1300单/日）',
+            '从0到1搭建华商AI运营工作台，设计跨国跨业务权限体系，支撑100+人协同项目交付'
           ]
         },
         alibaba: {
-          position: '产品经理',
-          company: '阿里巴巴集团',
-          period: '2020-2022年',
+          position: '产品经理（实习）',
+          company: '阿里巴巴淘天集团 · 信息流产品部',
+          period: '2024年5月-8月',
           location: '中国杭州',
           achievements: [
-            '设计并推出商家入驻平台，完成率达95%',
-            '与数据科学团队合作构建预测分析工具',
-            '优化用户体验流程，转化率提升25%',
-            '指导初级产品经理并建立PM最佳实践'
+            '负责淘宝首页信息流推荐理由优化，统一卡片数据链路和前端展示标准',
+            '通过A/B测试驱动产品迭代，首页卡片曝光PV +1.3%，CTR +0.7%',
+            '优化推荐理由配置后台，降低配置失误率，提升上线流程效率',
+            '在DAU数亿级平台积累大规模用户产品与数据分析经验'
           ]
         },
         startup: {
-          position: '助理产品经理',
-          company: '科技创业公司',
-          period: '2019-2020年',
-          location: '中国上海',
+          position: '产品经理（实习）',
+          company: '字节跳动 · 抖音生活服务',
+          period: '2023年8月-12月',
+          location: '中国北京',
           achievements: [
-            '从概念到上线构建B2B SaaS平台MVP',
-            '进行用户研究和竞品分析以确定市场定位',
-            '与工程团队密切合作，采用敏捷开发方法',
-            '实现产品市场契合，用户留存率达80%'
+            '优化抖音城市POI落地页，有效曝光PV +12.9%，用户有行为率 +7.5%',
+            '优化feed流城市入口CTR +3%，推进地点清单、城市卡等新功能上线',
+            '搭建攻略内容标签体系与质量分级模型，实现内容池自动化展示',
+            '项目覆盖100+城市，建立高质量内容生态管理机制'
           ]
         }
       }
     },
     services: {
-      title: '我的服务',
-      description: '结合产品管理专业知识与创意技术，构建推动商业影响的创新解决方案。',
-      techStack: '技术栈',
-      techStackDesc: '我用来实现想法的工具和技术。',
+      title: '专业能力',
+      description: '结合产品管理、数据分析与AI产品经验，构建驱动业务增长的产品解决方案。',
+      techStack: '工具与技能',
+      techStackDesc: '日常产品与数据工作中使用的核心工具。',
       items: {
         aiOperations: {
-          title: 'AI运营',
-          description: '设计和实施AI驱动的运营系统，扩展业务流程并提高效率。'
+          title: 'AI产品规划',
+          description: '从0到1规划AI产品架构，定义业务接入SOP，推动AI能力在运营场景的落地与规模化应用。'
         },
         productGrowth: {
-          title: '产品增长',
-          description: '数据驱动的产品策略，优化用户体验并推动可持续的业务增长。'
+          title: '用户增长与运营',
+          description: '构建数据驱动的用户增长体系，涵盖拉新、留存、促活全链路，实现可持续的业务增长。'
         },
         creativeCoding: {
-          title: '创意编程',
-          description: '使用Three.js、WebGL和现代Web技术创造引人入胜的交互体验。'
+          title: '数据分析与洞察',
+          description: '熟练使用SQL、Python进行数据分析，通过数据归因和A/B测试驱动产品决策，确保每个迭代有据可依。'
         },
         processOptimization: {
-          title: '流程优化',
-          description: '简化工作流程并自动化重复任务，最大化团队生产力和输出质量。'
+          title: '跨国协同管理',
+          description: '具备跨6国、100+人协同的产品落地经验，擅长定义SOP和权限体系，推动复杂项目高效交付。'
         }
       }
     },
     testimonials: {
-      title: '同事评价',
-      description: '来自不同项目和公司的团队成员和合作伙伴的反馈。',
-      readyTitle: '准备合作了吗？',
-      readyDesc: '让我们讨论如何共同创造推动真正商业影响的卓越产品。',
+      title: '合作评价',
+      description: '来自不同项目中合作伙伴的反馈与评价。',
+      readyTitle: '有兴趣交流？',
+      readyDesc: '欢迎探讨产品增长、AI产品落地或跨境电商领域的话题与机会。',
       startConversation: '开始对话',
       items: {
         sarah: {
-          name: '陈莎拉',
-          role: '工程总监',
+          name: '陈昕',
+          role: '技术负责人',
           company: 'Lazada',
-          content: 'Daisy具有将复杂AI概念转化为实用商业解决方案的卓越能力。她在LazCortex项目上的领导力改变了我们的运营效率。'
+          content: 'Daisy在推动AI工作台项目时展现了出色的跨团队协调能力，能把复杂的业务需求拆解成清晰的产品方案并高效推进落地。'
         },
         michael: {
-          name: '张迈克',
-          role: '产品副总裁',
-          company: '阿里巴巴国际',
-          content: '与Daisy合作是产品策略的大师课。她将分析严谨性与创造性问题解决相结合，始终交付成果。'
+          name: '张维',
+          role: '运营负责人',
+          company: 'Lazada',
+          content: 'Daisy对数据的敏感度很高，频道增长的每一步策略都有数据支撑。她主动推动的风控治理让我们从虚假繁荣转向了健康增长。'
         },
         lisa: {
-          name: '王丽莎',
-          role: 'UX研究负责人',
-          company: '科技创业公司',
-          content: 'Daisy以用户为中心的方法和对细节的关注提升了我们的产品体验。她的协作风格使跨职能工作变得无缝。'
+          name: '王琳',
+          role: '产品导师',
+          company: '阿里巴巴淘天',
+          content: 'Daisy作为实习生就展现了超出预期的主动性和产品判断力，能独立推进项目从数据分析到方案落地的全流程。'
         }
       }
     },
     contact: {
       title: '联系我',
-      description: '随时欢迎讨论新机会、合作和创新项目。联系我，让我们一起创造非凡的作品。',
+      description: '欢迎交流产品管理、用户增长、AI产品或跨境电商相关话题。期待与你建立连接。',
       email: '邮箱',
       wechat: '微信',
       linkedin: '领英',
       github: 'GitHub',
-      footer: '© 2024 邹雨佳 (Daisy)。用创新和卓越的热情精心打造。'
+      footer: '© 2026 邹雨珈 (Daisy)。清华苏世民学者 | 跨境电商产品经理。'
     },
     benefits: {
-      title: '为什么选择我',
-      description: '我为每个项目和合作带来的独特价值。',
-      readyTitle: '准备构建令人惊叹的产品？',
-      readyDesc: '让我们讨论如何合作，用AI和创意技术的力量实现您的产品愿景。',
-      startProject: '开始项目',
-      scheduleCall: '预约通话',
+      title: '为什么选择与我合作',
+      description: '我在每个项目中带来的核心价值。',
+      readyTitle: '期待合作？',
+      readyDesc: '欢迎探讨如何用数据驱动增长、用AI重塑运营，一起打造有影响力的产品。',
+      startProject: '开始交流',
+      scheduleCall: '预约沟通',
       items: {
         conversion: {
-          title: '转化导向',
-          description: '每个决策都基于数据和用户研究，最大化商业影响和投资回报率。'
+          title: '数据驱动',
+          description: '每个产品决策都基于数据归因和A/B测试验证，追求可量化的业务成果。'
         },
         aiDriven: {
-          title: 'AI驱动创新',
-          description: '利用前沿AI技术解决复杂的运营挑战。'
+          title: 'AI产品落地',
+          description: '具备从0到1的AI产品搭建经验，能将AI能力转化为实际业务价值。'
         },
         crossFunctional: {
-          title: '跨职能领导',
-          description: '经验证的能力，能够协调多元化团队和利益相关者朝着共同目标努力。'
+          title: '跨国协同',
+          description: '主导过跨6国、100+人协同的产品项目，擅长跨文化团队沟通与推进。'
         },
         rapidExecution: {
-          title: '快速执行',
-          description: '从概念到上线的创纪录时间，不妥协质量。'
+          title: '全链路思维',
+          description: '兼具用户增长、精细化运营、商业化与风控治理经验，能从全局视角规划产品。'
         },
         riskMitigation: {
-          title: '风险缓解',
-          description: '全面的规划和测试，确保产品发布和运营的顺利进行。'
+          title: '风控与数据治理',
+          description: '重视数据真实性与业务健康度，有实际推动风控策略落地、清理虚假流量的经验。'
         },
         scalable: {
-          title: '可扩展解决方案',
-          description: '构建随业务需求增长的系统和流程。'
+          title: '快速学习',
+          description: '清华苏世民学者，从新闻到产品跨界转型，具备快速进入新领域并产出成果的能力。'
         }
       }
     }
