@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -39,19 +40,24 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   devServer: {
+    host: '0.0.0.0',
     port: 3000,
-    allowedHosts: ['all', '.alibaba-inc.com'],
-    historyApiFallback: {
-      index: '/index.html',
-      rewrites: [
-        { from: /^\/_p\/\d+\//, to: '/index.html' }
-      ]
-    }
+    allowedHosts: 'all',
+    static: {
+      directory: path.join(__dirname, 'public')
+    },
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: 'body'
+    })
+    ,
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') }
+      ]
     })
   ]
 };

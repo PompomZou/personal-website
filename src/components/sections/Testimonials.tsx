@@ -12,7 +12,7 @@ const Testimonials: React.FC = () => {
       name: t.testimonials.items.sarah.name,
       role: t.testimonials.items.sarah.role,
       company: t.testimonials.items.sarah.company,
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+      avatar: '/testimonials/avatar1.svg',
       content: t.testimonials.items.sarah.content,
       rating: 5
     },
@@ -21,7 +21,7 @@ const Testimonials: React.FC = () => {
       name: t.testimonials.items.michael.name,
       role: t.testimonials.items.michael.role,
       company: t.testimonials.items.michael.company,
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+      avatar: '/testimonials/avatar2.svg',
       content: t.testimonials.items.michael.content,
       rating: 5
     },
@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
       name: t.testimonials.items.lisa.name,
       role: t.testimonials.items.lisa.role,
       company: t.testimonials.items.lisa.company,
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+      avatar: '/testimonials/avatar3.svg',
       content: t.testimonials.items.lisa.content,
       rating: 5
     }

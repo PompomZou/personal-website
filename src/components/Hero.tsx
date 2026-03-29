@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg ring-4 ring-white dark:ring-gray-800">
                 <img
-                  src="https://oneday-react-native.oss-cn-zhangjiakou.aliyuncs.com/oneday/source/304a5ed0-c610-4657-a527-0ccebf2a4626.jpeg"
+                  src="/avatar.svg"
                   alt="Zou Yujia (Daisy)"
                   className="w-full h-full object-cover object-center"
                 />

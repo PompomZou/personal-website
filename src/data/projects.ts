@@ -21,7 +21,7 @@ export const projects: Project[] = [
     titleKey: 'work.projects.lazcortex.title',
     industryKey: 'work.projects.lazcortex.industry',
     descriptionKey: 'work.projects.lazcortex.description',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+    image: '/projects/project1.svg',
     tags: ['AI/ML', 'Operations', 'Dashboard'],
     metrics: {
       users: '1000+',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     titleKey: 'work.projects.creative.title',
     industryKey: 'work.projects.creative.industry',
     descriptionKey: 'work.projects.creative.description',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop',
+    image: '/projects/project2.svg',
     tags: ['Three.js', 'WebGL', 'Creative'],
     metrics: {
       users: '500K+',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     titleKey: 'work.projects.optimization.title',
     industryKey: 'work.projects.optimization.industry',
     descriptionKey: 'work.projects.optimization.description',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
+    image: '/projects/project3.svg',
     tags: ['Analytics', 'UX', 'Conversion'],
     metrics: {
       users: '2M+',
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     titleKey: 'work.projects.framework.title',
     industryKey: 'work.projects.framework.industry',
     descriptionKey: 'work.projects.framework.description',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+    image: '/projects/project4.svg',
     tags: ['AI Agents', 'Framework', 'Automation'],
     metrics: {
       users: '100+',
