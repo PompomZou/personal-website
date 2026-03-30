@@ -1,16 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
-import Portfolio from './components/Portfolio';
+import ErrorBoundary from './components/ErrorBoundary';
+import { Portfolio } from './components';
 
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-gray-50">
-        <Routes>
-          <Route path="/" element={<Portfolio />} />
-        </Routes>
-      </div>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-gray-50">
+          <Routes>
+            <Route path="/" element={<Portfolio />} />
+          </Routes>
+        </div>
+      </ErrorBoundary>
     </LanguageProvider>
   );
 }
