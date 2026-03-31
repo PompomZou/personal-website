@@ -36,9 +36,15 @@ module.exports = {
       }
     ]
   },
-  resolve: {
+  resolve: { /* aliases_for_refactor_auto_structure */
     extensions: ['.ts', '.tsx', '.js', '.jsx']
-  },
+  ,alias: {
+    components: require(path).resolve(__dirname, src/components),
+    ui: require(path).resolve(__dirname, src/components/ui),
+    sections: require(path).resolve(__dirname, src/components/sections),
+    pages: require(path).resolve(__dirname, src/pages)
+  }
+},
   devServer: {
     host: '0.0.0.0',
     port: 3000,
