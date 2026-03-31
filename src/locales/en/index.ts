@@ -1,9 +1,7 @@
-// 英文翻译文件汇总入口
-import { navigation } from './navigation';
-import { hero } from './hero';
-import { about } from './about';
-import { work } from './work';
-import { experience } from './experience';
+// 使用 utils/translations 中的英文翻译
+import { translations } from '../../utils/translations';
+
+export const en = translations.en;
 
 // 导入其他模块（从原文件中提取）
 const services = {
@@ -183,17 +181,5 @@ const philosophy = {
 };
 
 // 导出完整的英文翻译对象
-export const en = {
-  nav: navigation,
-  hero,
-  about,
-  work,
-  experience,
-  services,
-  testimonials,
-  contact,
-  benefits,
-  education,
-  honors,
-  philosophy
-};
+// 保持默认导出兼容性
+export default en;
